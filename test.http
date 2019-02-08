@@ -2,6 +2,6 @@ POST http://localhost:3000/authenticate HTTP/1.1
 content-type: application/json
 
 {
-    "email":"example@mail.com",
+    "email":"jucrodriguezpu@unal.edu.co",
     "password":"123123123"
 }
