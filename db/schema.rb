@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2019_02_08_163952) do
 
   create_table "subjects", force: :cascade do |t|
     t.string "name"
+    t.string "summary"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

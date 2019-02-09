@@ -1,7 +1,12 @@
-POST http://localhost:3000/authenticate HTTP/1.1
+POST http://localhost:3000/users HTTP/1.1
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NDk4Mjg2NjB9.uSPcYDj6ikrzJj5uUpOIA4wj3oyq9Z3qW3U8eyA5TI4
 content-type: application/json
 
 {
-    "email":"jucrodriguezpu@unal.edu.co",
-    "password":"123123123"
+    "name":"Iván Yesid",
+    "last_name":"Castellanos Martínez",
+    "email":"iycastellanosm@unal.edu.co",
+    "password":"123123123",
+    "password_confirmation":"123123123",
+    "role_id":"2"
 }

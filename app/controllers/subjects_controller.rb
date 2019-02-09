@@ -13,7 +13,7 @@ class SubjectsController < ApplicationController
 
   # POST /subjects
   def create
-    @subject = subject.new(career_params)
+    @subject = subject.new(subject_params)
 
     if @subject.save
       render json: @subject, status: :created, location: @subject
