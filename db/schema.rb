@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_08_163952) do
+ActiveRecord::Schema.define(version: 2019_02_11_161633) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -45,13 +45,13 @@ ActiveRecord::Schema.define(version: 2019_02_08_163952) do
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "last_name"
-    t.string "email"
+    t.string "email", null: false
     t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "role_id"
-    t.integer "article_id"
-    t.index ["article_id"], name: "index_users_on_article_id"
+    t.integer "career_id"
+    t.index ["career_id"], name: "index_users_on_career_id"
     t.index ["role_id"], name: "index_users_on_role_id"
   end
 

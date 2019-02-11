@@ -1,4 +1,6 @@
 class SubjectsController < ApplicationController
+  before_action :set_subject, only: [:show, :update, :destroy]
+
     # GET /subjects
   def index
     @subjects = Subject.all
@@ -35,4 +37,15 @@ class SubjectsController < ApplicationController
   def destroy
     @subject.destroy
   end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_career
+      @subject = Subject.find(params[:id])
+    end
+
+    Only allow a trusted parameter "white list" through.
+    def subject_params
+      params.require(:subject).permit(:name, :summary)
+    end
 end

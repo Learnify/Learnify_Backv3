@@ -1383,3 +1383,2671 @@ Migrating to CreateSubjects (20190208163952)
   ↳ db/seeds.rb:27
   [1m[35m (132.2ms)[0m  [1m[36mcommit transaction[0m
   ↳ db/seeds.rb:27
+  [1m[36mUser Load (15.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/" for 127.0.0.1 at 2019-02-11 07:59:56 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/juanca/.rvm/gems/ruby-2.5.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/juanca/.rvm/gems/ruby-2.5.0/gems/railties-5.2.2/lib/rails/templates/rails/welcome/index.html.erb (13.1ms)
+Completed 200 OK in 128ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 08:01:44 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 28ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2019-02-11 08:01:54 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/create"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2019-02-11 08:03:12 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 08:03:14 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 08:03:15 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 08:03:16 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 08:03:16 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 08:03:17 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 08:03:25 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 08:03:27 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 08:03:28 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 08:03:28 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 08:03:28 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 08:03:29 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 08:03:29 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/authenticate" for 127.0.0.1 at 2019-02-11 08:34:36 -0500
+Processing by AuthenticationController#authenticate as */*
+  Parameters: {"email"=>"jucrodriguezpu@unal.edu.co", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jucrodriguezpu@unal.edu.co", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:20
+Completed 200 OK in 148ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 08:34:55 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 433ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/create" for 127.0.0.1 at 2019-02-11 08:35:57 -0500
+  
+ActionController::RoutingError (No route matches [POST] "/users/create"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:36:30 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 8ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:40:26 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:40:29 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 10ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:40:30 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 10ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:40:39 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ArgumentError (Before process_action callback :authenticate_request has not been defined):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:41:02 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 28ms (Views: 0.3ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:41:30 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "user"=>{"email"=>"iycastellanosm@unal.edu.co"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:41:31 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "user"=>{"email"=>"iycastellanosm@unal.edu.co"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:41:31 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "user"=>{"email"=>"iycastellanosm@unal.edu.co"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:41:32 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "user"=>{"email"=>"iycastellanosm@unal.edu.co"}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:41:32 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "user"=>{"email"=>"iycastellanosm@unal.edu.co"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 11ms (Views: 0.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:41:32 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "user"=>{"email"=>"iycastellanosm@unal.edu.co"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:52:04 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Completed 404 Not Found in 18ms (ActiveRecord: 0.9ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=user_email):
+  
+app/commands/authorize_api_request.rb:19:in `user'
+app/commands/authorize_api_request.rb:11:in `call'
+app/controllers/application_controller.rb:10:in `authenticate_request'
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:54:11 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=user_email):
+  
+app/commands/authorize_api_request.rb:19:in `user'
+app/commands/authorize_api_request.rb:11:in `call'
+app/controllers/application_controller.rb:10:in `authenticate_request'
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:54:41 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `email' for #<AuthorizeApiRequest:0x00007fffbd7d6260>):
+  
+app/commands/authorize_api_request.rb:19:in `user'
+app/commands/authorize_api_request.rb:11:in `call'
+app/controllers/application_controller.rb:10:in `authenticate_request'
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 08:55:28 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Completed 500 Internal Server Error in 44ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `email' for #<AuthorizeApiRequest:0x00007fffc3b35810>):
+  
+app/commands/authorize_api_request.rb:19:in `user'
+app/commands/authorize_api_request.rb:11:in `call'
+app/controllers/application_controller.rb:10:in `authenticate_request'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:08:28 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "email"], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Completed 500 Internal Server Error in 532ms (ActiveRecord: 0.8ms)
+
+
+  
+NameError (undefined local variable or method `params' for #<AuthorizeApiRequest:0x00007f2b18c9e1a0>):
+  
+app/commands/authorize_api_request.rb:21:in `user'
+app/commands/authorize_api_request.rb:11:in `call'
+app/controllers/application_controller.rb:10:in `authenticate_request'
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:10:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"jucrodriguezpu@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"jucrodriguezpu@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "email"], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.3ms)
+
+
+  
+NameError (undefined local variable or method `params' for #<AuthorizeApiRequest:0x00007f2b18a70810>):
+  
+app/commands/authorize_api_request.rb:21:in `user'
+app/commands/authorize_api_request.rb:11:in `call'
+app/controllers/application_controller.rb:10:in `authenticate_request'
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:31:13 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 13ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:31:30 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 24ms (Views: 0.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:44:20 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 9ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:44:32 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:45:01 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined method `user?' for ApplicationController:Class
+Did you mean?  use):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:46:15 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined local variable or method `user' for ApplicationController:Class
+Did you mean?  use):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:46:56 -0500
+  
+ActionController::RoutingError (undefined local variable or method `user' for ApplicationController:Class
+Did you mean?  use):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:47:10 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined local variable or method `user' for ApplicationController:Class
+Did you mean?  use):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:47:14 -0500
+  
+ActionController::RoutingError (undefined local variable or method `user' for ApplicationController:Class
+Did you mean?  use):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:48:17 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined local variable or method `user' for ApplicationController:Class
+Did you mean?  use):
+  
+app/controllers/application_controller.rb:2:in `<class:ApplicationController>'
+app/controllers/application_controller.rb:1:in `<main>'
+app/controllers/users_controller.rb:1:in `<main>'
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:54:57 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 28ms (Views: 0.2ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:55:27 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 10ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:55:29 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/" for 127.0.0.1 at 2019-02-11 09:55:29 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 12ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-02-11 09:58:10 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-02-11 09:58:20 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 200 OK in 24ms (Views: 1.7ms | ActiveRecord: 1.2ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mRole Load (0.1ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Create (12.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "role_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Iván Yesid"], ["last_name", "Castellanos Martínez"], ["email", "iycastellanosm@unal.edu.co"], ["password_digest", "$2a$10$1GQ1g4HTkKuxi5djGXAPIecd8l27E2vW6CTfx.WQBbo3Qoh4BYgEO"], ["created_at", "2019-02-11 15:00:13.447105"], ["updated_at", "2019-02-11 15:00:13.447105"], ["role_id", 2]]
+  [1m[35m (522.6ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users" for 127.0.0.1 at 2019-02-11 10:00:36 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 200 OK in 23ms (Views: 2.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-02-11 10:00:45 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2019-02-11 10:00:49 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:01:12 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 23ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/roles" for 127.0.0.1 at 2019-02-11 10:01:30 -0500
+Processing by RolesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mRole Load (0.2ms)[0m  [1m[34mSELECT "roles".* FROM "roles"[0m
+  ↳ app/controllers/roles_controller.rb:4
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/articles" for 127.0.0.1 at 2019-02-11 10:01:38 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/controllers/articles_controller.rb:8
+Completed 200 OK in 20ms (Views: 11.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2019-02-11 10:01:43 -0500
+Processing by SubjectsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/controllers/subjects_controller.rb:6
+Completed 200 OK in 16ms (Views: 9.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2019-02-11 10:01:43 -0500
+Processing by SubjectsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mSubject Load (0.2ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/controllers/subjects_controller.rb:6
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/careers" for 127.0.0.1 at 2019-02-11 10:01:50 -0500
+Processing by CareersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mCareer Load (0.2ms)[0m  [1m[34mSELECT "careers".* FROM "careers"[0m
+  ↳ app/controllers/careers_controller.rb:8
+Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/careers/2" for 127.0.0.1 at 2019-02-11 10:01:54 -0500
+Processing by CareersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/careers" for 127.0.0.1 at 2019-02-11 10:02:20 -0500
+Processing by CareersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mCareer Load (0.3ms)[0m  [1m[34mSELECT "careers".* FROM "careers"[0m
+  ↳ app/controllers/careers_controller.rb:8
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/careers/1" for 127.0.0.1 at 2019-02-11 10:02:27 -0500
+Processing by CareersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/careers/1" for 127.0.0.1 at 2019-02-11 10:02:38 -0500
+Processing by CareersController#show as HTML
+  Parameters: {"id"=>"1"}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/careers/1" for 127.0.0.1 at 2019-02-11 10:02:41 -0500
+Processing by CareersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-02-11 10:02:56 -0500
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:44
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/careers/1" for 127.0.0.1 at 2019-02-11 10:04:05 -0500
+Processing by CareersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/careers/1" for 127.0.0.1 at 2019-02-11 10:04:30 -0500
+Processing by CareersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/careers/1" for 127.0.0.1 at 2019-02-11 10:04:52 -0500
+Processing by CareersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/careers/1" for 127.0.0.1 at 2019-02-11 10:04:54 -0500
+Processing by CareersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/careers/1" for 127.0.0.1 at 2019-02-11 10:05:03 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by CareersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mCareer Load (0.1ms)[0m  [1m[34mSELECT  "careers".* FROM "careers" WHERE "careers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/careers_controller.rb:44
+Completed 200 OK in 28ms (Views: 0.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/careers/2" for 127.0.0.1 at 2019-02-11 10:05:10 -0500
+Processing by CareersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mCareer Load (0.3ms)[0m  [1m[34mSELECT  "careers".* FROM "careers" WHERE "careers"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/careers_controller.rb:44
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/subjects/2" for 127.0.0.1 at 2019-02-11 10:06:34 -0500
+Processing by SubjectsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/subjects" for 127.0.0.1 at 2019-02-11 10:06:38 -0500
+Processing by SubjectsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  ↳ app/controllers/subjects_controller.rb:6
+Completed 200 OK in 13ms (Views: 8.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/roles" for 127.0.0.1 at 2019-02-11 10:07:35 -0500
+Processing by RolesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mRole Load (0.2ms)[0m  [1m[34mSELECT "roles".* FROM "roles"[0m
+  ↳ app/controllers/roles_controller.rb:4
+Completed 200 OK in 10ms (Views: 4.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/roles" for 127.0.0.1 at 2019-02-11 10:08:19 -0500
+Processing by RolesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mRole Load (0.2ms)[0m  [1m[34mSELECT "roles".* FROM "roles"[0m
+  ↳ app/controllers/roles_controller.rb:4
+Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/roles/2" for 127.0.0.1 at 2019-02-11 10:08:22 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/roles/2"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/roles/2" for 127.0.0.1 at 2019-02-11 10:09:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/roles/2"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/roles/2" for 127.0.0.1 at 2019-02-11 10:09:21 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/roles/2"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/roles/2" for 127.0.0.1 at 2019-02-11 10:09:43 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/roles/2"):
+  
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started GET "/roles/2" for 127.0.0.1 at 2019-02-11 10:09:58 -0500
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by RolesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/roles/2" for 127.0.0.1 at 2019-02-11 10:11:24 -0500
+Processing by RolesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/roles/2" for 127.0.0.1 at 2019-02-11 10:11:25 -0500
+Processing by RolesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/roles/2" for 127.0.0.1 at 2019-02-11 10:11:36 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by RolesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mRole Load (0.1ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/roles_controller.rb:34
+Completed 200 OK in 29ms (Views: 0.4ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:18:41 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 14ms (Views: 0.2ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:18:52 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:18:55 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 6ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:18:56 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "role_id"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:19:52 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 8ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:07 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:08 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 10ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:08 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:09 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:09 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 11ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:09 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 6ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:09 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 7ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 9ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 9ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:24 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 7ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:26 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 8ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:26 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:26 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 5ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:26 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 10ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:27 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 5ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:27 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 7ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:37 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"2"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 5ms (Views: 0.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:20:40 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"1", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"1"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 8ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:21:09 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"1", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"1"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 12ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:21:10 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"1", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"1"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+Unpermitted parameter: :role_id
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 8ms (Views: 0.2ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:21:19 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"1", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"1"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mRole Load (0.1ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mUser Create (1.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "role_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Iván Yesid"], ["last_name", "Castellanos Martínez"], ["email", "iycastellanosm@unal.edu.co"], ["password_digest", "123123123"], ["created_at", "2019-02-11 15:21:19.714333"], ["updated_at", "2019-02-11 15:21:19.714333"], ["role_id", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (139.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 201 Created in 173ms (Views: 0.7ms | ActiveRecord: 142.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-02-11 10:21:48 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.7ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (491.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (229.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190203162912)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "last_name" varchar, "email" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190203162912_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190203162912"]]
+  ↳ bin/rails:9
+  [1m[35m (170.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateArticles (20190203163826)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "visits_count" integer, "url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190203163826_create_articles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190203163826"]]
+  ↳ bin/rails:9
+  [1m[35m (149.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateRoles (20190208041558)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE TABLE "roles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208041558_create_roles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208041558"]]
+  ↳ bin/rails:9
+  [1m[35m (175.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddRoleRefToUser (20190208044951)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "users" ADD "role_id" integer[0m
+  ↳ db/migrate/20190208044951_add_role_ref_to_user.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_role_id" ON "users" ("role_id")[0m
+  ↳ db/migrate/20190208044951_add_role_ref_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208044951"]]
+  ↳ bin/rails:9
+  [1m[35m (152.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddArticleRefToUser (20190208163257)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "users" ADD "article_id" integer[0m
+  ↳ db/migrate/20190208163257_add_article_ref_to_user.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_users_on_article_id" ON "users" ("article_id")[0m
+  ↳ db/migrate/20190208163257_add_article_ref_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163257"]]
+  ↳ bin/rails:9
+  [1m[35m (150.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddUserRefToArticle (20190208163724)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "articles" ADD "user_id" integer[0m
+  ↳ db/migrate/20190208163724_add_user_ref_to_article.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_articles_on_user_id" ON "articles" ("user_id")[0m
+  ↳ db/migrate/20190208163724_add_user_ref_to_article.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163724"]]
+  ↳ bin/rails:9
+  [1m[35m (142.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateCareers (20190208163911)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "careers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208163911_create_careers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163911"]]
+  ↳ bin/rails:9
+  [1m[35m (136.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateSubjects (20190208163952)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "summary" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208163952_create_subjects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163952"]]
+  ↳ bin/rails:9
+  [1m[35m (191.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-11 15:31:13.648866"], ["updated_at", "2019-02-11 15:31:13.648866"]]
+  ↳ bin/rails:9
+  [1m[35m (179.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mRole Create (0.9ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Estudiante"], ["created_at", "2019-02-11 15:31:39.294087"], ["updated_at", "2019-02-11 15:31:39.294087"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (148.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRole Create (0.8ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Profesor"], ["created_at", "2019-02-11 15:31:39.447066"], ["updated_at", "2019-02-11 15:31:39.447066"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (125.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCareer Create (0.8ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ingeniería de Sistemas y Computación"], ["created_at", "2019-02-11 15:31:39.579046"], ["updated_at", "2019-02-11 15:31:39.579046"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (135.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCareer Create (1.8ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ingeniería Mecatrónica"], ["created_at", "2019-02-11 15:31:39.718870"], ["updated_at", "2019-02-11 15:31:39.718870"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (151.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCareer Create (0.8ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Física"], ["created_at", "2019-02-11 15:31:39.878354"], ["updated_at", "2019-02-11 15:31:39.878354"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (131.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCareer Create (2.5ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Arquitectura"], ["created_at", "2019-02-11 15:31:40.015500"], ["updated_at", "2019-02-11 15:31:40.015500"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (137.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mCareer Create (1.4ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Medicina"], ["created_at", "2019-02-11 15:31:40.160296"], ["updated_at", "2019-02-11 15:31:40.160296"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (124.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCareer Create (0.7ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Música"], ["created_at", "2019-02-11 15:31:40.289898"], ["updated_at", "2019-02-11 15:31:40.289898"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (188.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mSubject Create (0.8ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Programación Ruby"], ["summary", "Ésta es una materia sobre Ruby"], ["created_at", "2019-02-11 15:31:40.486507"], ["updated_at", "2019-02-11 15:31:40.486507"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (157.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mSubject Create (0.8ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cáncer"], ["summary", "Ésta es una materia sobre el cáncer y sus efectos"], ["created_at", "2019-02-11 15:31:40.646185"], ["updated_at", "2019-02-11 15:31:40.646185"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (185.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSubject Create (2.8ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Urbanística"], ["summary", "Ésta es una materia sobre urbanística"], ["created_at", "2019-02-11 15:31:40.840304"], ["updated_at", "2019-02-11 15:31:40.840304"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (141.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSubject Create (0.7ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lectoescritura musical"], ["summary", "Ésta es una materia que desarrolla capacidad auditiva y formación teórica"], ["created_at", "2019-02-11 15:31:40.987240"], ["updated_at", "2019-02-11 15:31:40.987240"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (178.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mSubject Create (2.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Física cuantica"], ["summary", "Ésta materia nos muestra la naturaleza a escalas espacialmente pequeñas"], ["created_at", "2019-02-11 15:31:41.169341"], ["updated_at", "2019-02-11 15:31:41.169341"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (131.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mRole Load (0.2ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "role_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Juan Camilo"], ["last_name", "Rodríguez Puentes"], ["email", "jucrodriguezpu@unal.edu.co"], ["password_digest", "$2a$10$FozxaLpoXrE0QU.VBJQEz.dD3yRjG4fasFbdOwN2fTfxCC0FfM4lK"], ["created_at", "2019-02-11 15:31:41.378642"], ["updated_at", "2019-02-11 15:31:41.378642"], ["role_id", 1]]
+  ↳ db/seeds.rb:25
+  [1m[35m (131.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mArticle Create (3.5ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Programación con ruby"], ["body", "Éste es un artículo de Programación en Ruby"], ["visits_count", 2], ["created_at", "2019-02-11 15:31:41.520919"], ["updated_at", "2019-02-11 15:31:41.520919"], ["user_id", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (185.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (424.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (121.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190203162912)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20190203162912_create_users.rb:10
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (162.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (158.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190203162912)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "last_name" varchar, "email" varchar NOT NULL, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190203162912_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190203162912"]]
+  ↳ bin/rails:9
+  [1m[35m (128.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateArticles (20190203163826)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "visits_count" integer, "url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190203163826_create_articles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190203163826"]]
+  ↳ bin/rails:9
+  [1m[35m (132.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateRoles (20190208041558)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "roles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208041558_create_roles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208041558"]]
+  ↳ bin/rails:9
+  [1m[35m (166.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddRoleRefToUser (20190208044951)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "users" ADD "role_id" integer[0m
+  ↳ db/migrate/20190208044951_add_role_ref_to_user.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_role_id" ON "users" ("role_id")[0m
+  ↳ db/migrate/20190208044951_add_role_ref_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208044951"]]
+  ↳ bin/rails:9
+  [1m[35m (435.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddArticleRefToUser (20190208163257)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "users" ADD "article_id" integer[0m
+  ↳ db/migrate/20190208163257_add_article_ref_to_user.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_article_id" ON "users" ("article_id")[0m
+  ↳ db/migrate/20190208163257_add_article_ref_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163257"]]
+  ↳ bin/rails:9
+  [1m[35m (161.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddUserRefToArticle (20190208163724)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "articles" ADD "user_id" integer[0m
+  ↳ db/migrate/20190208163724_add_user_ref_to_article.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_articles_on_user_id" ON "articles" ("user_id")[0m
+  ↳ db/migrate/20190208163724_add_user_ref_to_article.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163724"]]
+  ↳ bin/rails:9
+  [1m[35m (125.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateCareers (20190208163911)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "careers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208163911_create_careers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163911"]]
+  ↳ bin/rails:9
+  [1m[35m (119.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateSubjects (20190208163952)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "summary" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208163952_create_subjects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163952"]]
+  ↳ bin/rails:9
+  [1m[35m (142.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-11 15:36:52.407511"], ["updated_at", "2019-02-11 15:36:52.407511"]]
+  ↳ bin/rails:9
+  [1m[35m (123.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mRole Create (1.1ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Estudiante"], ["created_at", "2019-02-11 15:36:58.126945"], ["updated_at", "2019-02-11 15:36:58.126945"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (491.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRole Create (1.5ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Profesor"], ["created_at", "2019-02-11 15:36:58.623395"], ["updated_at", "2019-02-11 15:36:58.623395"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (140.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCareer Create (0.7ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ingeniería de Sistemas y Computación"], ["created_at", "2019-02-11 15:36:58.773226"], ["updated_at", "2019-02-11 15:36:58.773226"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (110.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCareer Create (1.1ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ingeniería Mecatrónica"], ["created_at", "2019-02-11 15:36:58.886382"], ["updated_at", "2019-02-11 15:36:58.886382"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (141.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCareer Create (1.9ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Física"], ["created_at", "2019-02-11 15:36:59.033584"], ["updated_at", "2019-02-11 15:36:59.033584"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (136.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCareer Create (1.1ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Arquitectura"], ["created_at", "2019-02-11 15:36:59.175378"], ["updated_at", "2019-02-11 15:36:59.175378"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (125.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mCareer Create (1.1ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Medicina"], ["created_at", "2019-02-11 15:36:59.309363"], ["updated_at", "2019-02-11 15:36:59.309363"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (112.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCareer Create (1.1ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Música"], ["created_at", "2019-02-11 15:36:59.427258"], ["updated_at", "2019-02-11 15:36:59.427258"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (111.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mSubject Create (0.8ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Programación Ruby"], ["summary", "Ésta es una materia sobre Ruby"], ["created_at", "2019-02-11 15:36:59.546346"], ["updated_at", "2019-02-11 15:36:59.546346"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (165.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mSubject Create (1.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cáncer"], ["summary", "Ésta es una materia sobre el cáncer y sus efectos"], ["created_at", "2019-02-11 15:36:59.715708"], ["updated_at", "2019-02-11 15:36:59.715708"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (150.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSubject Create (1.5ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Urbanística"], ["summary", "Ésta es una materia sobre urbanística"], ["created_at", "2019-02-11 15:36:59.871604"], ["updated_at", "2019-02-11 15:36:59.871604"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (143.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSubject Create (1.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lectoescritura musical"], ["summary", "Ésta es una materia que desarrolla capacidad auditiva y formación teórica"], ["created_at", "2019-02-11 15:37:00.020230"], ["updated_at", "2019-02-11 15:37:00.020230"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (129.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mSubject Create (0.8ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Física cuantica"], ["summary", "Ésta materia nos muestra la naturaleza a escalas espacialmente pequeñas"], ["created_at", "2019-02-11 15:37:00.154071"], ["updated_at", "2019-02-11 15:37:00.154071"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (142.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mRole Load (0.1ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "role_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Juan Camilo"], ["last_name", "Rodríguez Puentes"], ["email", "jucrodriguezpu@unal.edu.co"], ["password_digest", "$2a$10$Vpwe.0VNUu8YcxR2tjBRxuxIbG7de0JtTzeC9l8lXjB91aT45lnzG"], ["created_at", "2019-02-11 15:37:00.387843"], ["updated_at", "2019-02-11 15:37:00.387843"], ["role_id", 1]]
+  ↳ db/seeds.rb:25
+  [1m[35m (181.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mArticle Create (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Programación con ruby"], ["body", "Éste es un artículo de Programación en Ruby"], ["visits_count", 2], ["created_at", "2019-02-11 15:37:00.581553"], ["updated_at", "2019-02-11 15:37:00.581553"], ["user_id", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (125.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+Started POST "/authenticate" for 127.0.0.1 at 2019-02-11 10:38:56 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"jucrodriguezpu@unal.edu.co", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jucrodriguezpu@unal.edu.co", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:20
+Completed 200 OK in 134ms (Views: 0.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:40:02 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"1", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"1"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "iycastellanosm@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mRole Load (0.1ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mUser Create (1.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "role_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Iván Yesid"], ["last_name", "Castellanos Martínez"], ["email", "iycastellanosm@unal.edu.co"], ["password_digest", "123123123"], ["created_at", "2019-02-11 15:40:02.746859"], ["updated_at", "2019-02-11 15:40:02.746859"], ["role_id", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (770.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 201 Created in 798ms (Views: 1.0ms | ActiveRecord: 772.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:40:09 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"1", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@unal.edu.co", "password_digest"=>"[FILTERED]", "role_id"=>"1"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "iycastellanosm@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mRole Load (0.1ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 12ms (Views: 0.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-02-11 10:40:25 -0500
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:8
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:42:56 -0500
+Error occurred while parsing request parameters.
+Contents:
+
+{
+    "name":"Iván Yesid",
+    "last_name":"Castellanos Martínez",
+    "email":"iycastellanosm@gmail.com",
+    "password":"123123123",
+    "password_confirmation":"123123123"
+    "role_id":"1"
+}
+  
+ActionDispatch::Http::Parameters::ParseError (765: unexpected token at '{
+    "name":"Iván Yesid",
+    "last_name":"Castellanos Martínez",
+    "email":"iycastellanosm@gmail.com",
+    "password":"123123123",
+    "password_confirmation":"123123123"
+    "role_id":"1"
+}'):
+  
+actionpack (5.2.2) lib/action_dispatch/http/parameters.rb:117:in `rescue in parse_formatted_parameters'
+actionpack (5.2.2) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (5.2.2) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.0.6) lib/rack/request.rb:59:in `fetch'
+rack (2.0.6) lib/rack/request.rb:59:in `fetch_header'
+actionpack (5.2.2) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (5.2.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:290:in `_wrapper_enabled?'
+actionpack (5.2.2) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (5.2.2) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.2) lib/abstract_controller/base.rb:134:in `process'
+actionpack (5.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.2) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.2) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.0.6) lib/rack/etag.rb:25:in `call'
+rack (2.0.6) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.6) lib/rack/head.rb:12:in `call'
+activerecord (5.2.2) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.2) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.2) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.6) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.2) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.0.6) lib/rack/sendfile.rb:111:in `call'
+railties (5.2.2) lib/rails/engine.rb:524:in `call'
+puma (3.12.0) lib/puma/configuration.rb:225:in `call'
+puma (3.12.0) lib/puma/server.rb:658:in `handle_request'
+puma (3.12.0) lib/puma/server.rb:472:in `process_client'
+puma (3.12.0) lib/puma/server.rb:332:in `block in run'
+puma (3.12.0) lib/puma/thread_pool.rb:133:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:43:23 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "role_id"=>"1", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@gmail.com", "role_id"=>"1"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "iycastellanosm@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mRole Load (0.1ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 10ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:43:30 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@gmail.com", "password"=>"[FILTERED]", "role_id"=>"1", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@gmail.com", "role_id"=>"1"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "iycastellanosm@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mRole Load (0.1ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 422 Unprocessable Entity in 10ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-02-11 10:43:36 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@gmail.com", "password_digest"=>"[FILTERED]", "role_id"=>"1", "user"=>{"name"=>"Iván Yesid", "last_name"=>"Castellanos Martínez", "email"=>"iycastellanosm@gmail.com", "password_digest"=>"[FILTERED]", "role_id"=>"1"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "iycastellanosm@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mRole Load (0.1ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "role_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Iván Yesid"], ["last_name", "Castellanos Martínez"], ["email", "iycastellanosm@gmail.com"], ["password_digest", "123123123"], ["created_at", "2019-02-11 15:43:36.755860"], ["updated_at", "2019-02-11 15:43:36.755860"], ["role_id", 1]]
+  ↳ app/controllers/users_controller.rb:20
+  [1m[35m (120.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:20
+Completed 201 Created in 137ms (Views: 0.8ms | ActiveRecord: 122.4ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateSubjects (20190208163952)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (3.7ms)[0m  [1m[35mDROP TABLE "subjects"[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20190208163952"]]
+  ↳ bin/rails:9
+  [1m[35m (138.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (178.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (188.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190203162912)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "last_name" varchar, "email" varchar NOT NULL, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190203162912_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190203162912"]]
+  ↳ bin/rails:9
+  [1m[35m (123.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateArticles (20190203163826)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "visits_count" integer, "url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190203163826_create_articles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190203163826"]]
+  ↳ bin/rails:9
+  [1m[35m (125.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateRoles (20190208041558)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "roles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208041558_create_roles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208041558"]]
+  ↳ bin/rails:9
+  [1m[35m (114.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddRoleRefToUser (20190208044951)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "users" ADD "role_id" integer[0m
+  ↳ db/migrate/20190208044951_add_role_ref_to_user.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_role_id" ON "users" ("role_id")[0m
+  ↳ db/migrate/20190208044951_add_role_ref_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208044951"]]
+  ↳ bin/rails:9
+  [1m[35m (127.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddArticleRefToUser (20190208163257)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "users" ADD "article_id" integer[0m
+  ↳ db/migrate/20190208163257_add_article_ref_to_user.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_article_id" ON "users" ("article_id")[0m
+  ↳ db/migrate/20190208163257_add_article_ref_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163257"]]
+  ↳ bin/rails:9
+  [1m[35m (152.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddUserRefToArticle (20190208163724)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "articles" ADD "user_id" integer[0m
+  ↳ db/migrate/20190208163724_add_user_ref_to_article.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_articles_on_user_id" ON "articles" ("user_id")[0m
+  ↳ db/migrate/20190208163724_add_user_ref_to_article.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163724"]]
+  ↳ bin/rails:9
+  [1m[35m (121.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateCareers (20190208163911)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "careers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208163911_create_careers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163911"]]
+  ↳ bin/rails:9
+  [1m[35m (131.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateSubjects (20190208163952)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "summary" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208163952_create_subjects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163952"]]
+  ↳ bin/rails:9
+  [1m[35m (124.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddCareerRefToUser (20190211155240)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "career_id" integer[0m
+  ↳ db/migrate/20190211155240_add_career_ref_to_user.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_users_on_career_id" ON "users" ("career_id")[0m
+  ↳ db/migrate/20190211155240_add_career_ref_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190211155240"]]
+  ↳ bin/rails:9
+  [1m[35m (131.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddUserRefToCareer (20190211155448)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "careers" ADD "user_id" integer[0m
+  ↳ db/migrate/20190211155448_add_user_ref_to_career.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_careers_on_user_id" ON "careers" ("user_id")[0m
+  ↳ db/migrate/20190211155448_add_user_ref_to_career.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190211155448"]]
+  ↳ bin/rails:9
+  [1m[35m (146.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-11 15:56:26.984249"], ["updated_at", "2019-02-11 15:56:26.984249"]]
+  ↳ bin/rails:9
+  [1m[35m (201.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mRole Create (1.0ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Estudiante"], ["created_at", "2019-02-11 15:57:00.685437"], ["updated_at", "2019-02-11 15:57:00.685437"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (149.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRole Create (1.5ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Profesor"], ["created_at", "2019-02-11 15:57:00.838120"], ["updated_at", "2019-02-11 15:57:00.838120"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (152.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCareer Create (0.9ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ingeniería de Sistemas y Computación"], ["created_at", "2019-02-11 15:57:01.000871"], ["updated_at", "2019-02-11 15:57:01.000871"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (122.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCareer Create (0.8ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ingeniería Mecatrónica"], ["created_at", "2019-02-11 15:57:01.125571"], ["updated_at", "2019-02-11 15:57:01.125571"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (142.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCareer Create (1.0ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Física"], ["created_at", "2019-02-11 15:57:01.271294"], ["updated_at", "2019-02-11 15:57:01.271294"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (146.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCareer Create (1.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Arquitectura"], ["created_at", "2019-02-11 15:57:01.424121"], ["updated_at", "2019-02-11 15:57:01.424121"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (149.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mCareer Create (0.9ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Medicina"], ["created_at", "2019-02-11 15:57:01.576118"], ["updated_at", "2019-02-11 15:57:01.576118"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (158.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCareer Create (1.4ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Música"], ["created_at", "2019-02-11 15:57:01.738002"], ["updated_at", "2019-02-11 15:57:01.738002"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (125.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mSubject Create (1.0ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Programación Ruby"], ["summary", "Ésta es una materia sobre Ruby"], ["created_at", "2019-02-11 15:57:01.873777"], ["updated_at", "2019-02-11 15:57:01.873777"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (119.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mSubject Create (1.5ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cáncer"], ["summary", "Ésta es una materia sobre el cáncer y sus efectos"], ["created_at", "2019-02-11 15:57:01.998700"], ["updated_at", "2019-02-11 15:57:01.998700"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (142.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSubject Create (1.4ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Urbanística"], ["summary", "Ésta es una materia sobre urbanística"], ["created_at", "2019-02-11 15:57:02.147879"], ["updated_at", "2019-02-11 15:57:02.147879"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (133.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSubject Create (1.5ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lectoescritura musical"], ["summary", "Ésta es una materia que desarrolla capacidad auditiva y formación teórica"], ["created_at", "2019-02-11 15:57:02.286235"], ["updated_at", "2019-02-11 15:57:02.286235"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (253.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mSubject Create (2.0ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Física cuantica"], ["summary", "Ésta materia nos muestra la naturaleza a escalas espacialmente pequeñas"], ["created_at", "2019-02-11 15:57:02.544582"], ["updated_at", "2019-02-11 15:57:02.544582"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (166.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mRole Load (0.1ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "role_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Juan Camilo"], ["last_name", "Rodríguez Puentes"], ["email", "jucrodriguezpu@unal.edu.co"], ["password_digest", "$2a$10$B55IQkLw5HRRA.syaZWMROzVNSxQPhTZtQeT01/IIUlst.2WIi5hK"], ["created_at", "2019-02-11 15:57:02.808219"], ["updated_at", "2019-02-11 15:57:02.808219"], ["role_id", 1]]
+  ↳ db/seeds.rb:25
+  [1m[35m (188.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:27
+  [1m[36mArticle Create (1.0ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Programación con ruby"], ["body", "Éste es un artículo de Programación en Ruby"], ["visits_count", 2], ["created_at", "2019-02-11 15:57:03.010633"], ["updated_at", "2019-02-11 15:57:03.010633"], ["user_id", 1]]
+  ↳ db/seeds.rb:27
+  [1m[35m (124.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddCareerToUser (20190211160445)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "career_id" integer[0m
+  ↳ db/migrate/20190211160445_add_career_to_user.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddCareerToUser (20190211160445)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "career_id" integer[0m
+  ↳ db/migrate/20190211160445_add_career_to_user.rb:3
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (117.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (156.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190203162912)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "last_name" varchar, "email" varchar NOT NULL, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190203162912_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190203162912"]]
+  ↳ bin/rails:9
+  [1m[35m (140.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateArticles (20190203163826)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "visits_count" integer, "url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190203163826_create_articles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190203163826"]]
+  ↳ bin/rails:9
+  [1m[35m (126.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateRoles (20190208041558)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "roles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208041558_create_roles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208041558"]]
+  ↳ bin/rails:9
+  [1m[35m (143.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddRoleRefToUser (20190208044951)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "role_id" integer[0m
+  ↳ db/migrate/20190208044951_add_role_ref_to_user.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_role_id" ON "users" ("role_id")[0m
+  ↳ db/migrate/20190208044951_add_role_ref_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208044951"]]
+  ↳ bin/rails:9
+  [1m[35m (431.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateCareers (20190208163911)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "careers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208163911_create_careers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163911"]]
+  ↳ bin/rails:9
+  [1m[35m (122.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateSubjects (20190208163952)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "summary" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208163952_create_subjects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163952"]]
+  ↳ bin/rails:9
+  [1m[35m (203.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddCareerToUser (20190211160445)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "users" ADD "career_id" integer[0m
+  ↳ db/migrate/20190211160445_add_career_to_user.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_career_id" ON "users" ("career_id")[0m
+  ↳ db/migrate/20190211160445_add_career_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190211160445"]]
+  ↳ bin/rails:9
+  [1m[35m (127.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-11 16:08:04.341561"], ["updated_at", "2019-02-11 16:08:04.341561"]]
+  ↳ bin/rails:9
+  [1m[35m (157.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddUserToArticle (20190211161030)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "articles" ADD "user_id" integer[0m
+  ↳ db/migrate/20190211161030_add_user_to_article.rb:3
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190211161030_add_user_to_article.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_articles_on_user_id" ON "articles" ("user_id")[0m
+  ↳ db/migrate/20190211161030_add_user_to_article.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190211161030"]]
+  ↳ bin/rails:9
+  [1m[35m (234.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (455.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (170.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190203162912)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "last_name" varchar, "email" varchar NOT NULL, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190203162912_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190203162912"]]
+  ↳ bin/rails:9
+  [1m[35m (129.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateArticles (20190203163826)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "visits_count" integer, "url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190203163826_create_articles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190203163826"]]
+  ↳ bin/rails:9
+  [1m[35m (118.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateRoles (20190208041558)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "roles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208041558_create_roles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208041558"]]
+  ↳ bin/rails:9
+  [1m[35m (107.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddRoleRefToUser (20190208044951)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "users" ADD "role_id" integer[0m
+  ↳ db/migrate/20190208044951_add_role_ref_to_user.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_users_on_role_id" ON "users" ("role_id")[0m
+  ↳ db/migrate/20190208044951_add_role_ref_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208044951"]]
+  ↳ bin/rails:9
+  [1m[35m (115.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateCareers (20190208163911)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "careers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208163911_create_careers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163911"]]
+  ↳ bin/rails:9
+  [1m[35m (121.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateSubjects (20190208163952)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "summary" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208163952_create_subjects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163952"]]
+  ↳ bin/rails:9
+  [1m[35m (186.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddCareerToUser (20190211160445)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "users" ADD "career_id" integer[0m
+  ↳ db/migrate/20190211160445_add_career_to_user.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_users_on_career_id" ON "users" ("career_id")[0m
+  ↳ db/migrate/20190211160445_add_career_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190211160445"]]
+  ↳ bin/rails:9
+  [1m[35m (139.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddUserToArticle (20190211161030)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "articles" ADD "user_id" integer[0m
+  ↳ db/migrate/20190211161030_add_user_to_article.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_articles_on_user_id" ON "articles" ("user_id")[0m
+  ↳ db/migrate/20190211161030_add_user_to_article.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190211161030"]]
+  ↳ bin/rails:9
+  [1m[35m (118.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-11 16:14:58.643650"], ["updated_at", "2019-02-11 16:14:58.643650"]]
+  ↳ bin/rails:9
+  [1m[35m (125.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddCareerRefToUser (20190211161633)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "career_id" integer[0m
+  ↳ db/migrate/20190211161633_add_career_ref_to_user.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (481.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (115.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateUsers (20190203162912)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "last_name" varchar, "email" varchar NOT NULL, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190203162912_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190203162912"]]
+  ↳ bin/rails:9
+  [1m[35m (148.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateArticles (20190203163826)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "visits_count" integer, "url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190203163826_create_articles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190203163826"]]
+  ↳ bin/rails:9
+  [1m[35m (129.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateRoles (20190208041558)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "roles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208041558_create_roles.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208041558"]]
+  ↳ bin/rails:9
+  [1m[35m (185.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddRoleRefToUser (20190208044951)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ADD "role_id" integer[0m
+  ↳ db/migrate/20190208044951_add_role_ref_to_user.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_users_on_role_id" ON "users" ("role_id")[0m
+  ↳ db/migrate/20190208044951_add_role_ref_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208044951"]]
+  ↳ bin/rails:9
+  [1m[35m (123.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateCareers (20190208163911)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "careers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208163911_create_careers.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163911"]]
+  ↳ bin/rails:9
+  [1m[35m (140.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateSubjects (20190208163952)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "summary" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20190208163952_create_subjects.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190208163952"]]
+  ↳ bin/rails:9
+  [1m[35m (146.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddUserToArticle (20190211161030)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "articles" ADD "user_id" integer[0m
+  ↳ db/migrate/20190211161030_add_user_to_article.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_articles_on_user_id" ON "articles" ("user_id")[0m
+  ↳ db/migrate/20190211161030_add_user_to_article.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190211161030"]]
+  ↳ bin/rails:9
+  [1m[35m (136.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddCareerRefToUser (20190211161633)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ADD "career_id" integer[0m
+  ↳ db/migrate/20190211161633_add_career_ref_to_user.rb:3
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_users_on_career_id" ON "users" ("career_id")[0m
+  ↳ db/migrate/20190211161633_add_career_ref_to_user.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190211161633"]]
+  ↳ bin/rails:9
+  [1m[35m (131.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (1.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-02-11 16:17:19.029938"], ["updated_at", "2019-02-11 16:17:19.029938"]]
+  ↳ bin/rails:9
+  [1m[35m (125.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[36mRole Create (0.9ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Estudiante"], ["created_at", "2019-02-11 16:17:26.103937"], ["updated_at", "2019-02-11 16:17:26.103937"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (365.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[36mRole Create (1.4ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Profesor"], ["created_at", "2019-02-11 16:17:26.474550"], ["updated_at", "2019-02-11 16:17:26.474550"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (126.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[36mCareer Create (0.8ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ingeniería de Sistemas y Computación"], ["created_at", "2019-02-11 16:17:26.637174"], ["updated_at", "2019-02-11 16:17:26.637174"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (450.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[36mCareer Create (0.9ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ingeniería Mecatrónica"], ["created_at", "2019-02-11 16:17:27.091126"], ["updated_at", "2019-02-11 16:17:27.091126"]]
+  ↳ db/seeds.rb:13
+  [1m[35m (130.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:13
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[36mCareer Create (0.8ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Física"], ["created_at", "2019-02-11 16:17:27.223726"], ["updated_at", "2019-02-11 16:17:27.223726"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (132.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[36mCareer Create (1.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Arquitectura"], ["created_at", "2019-02-11 16:17:27.358144"], ["updated_at", "2019-02-11 16:17:27.358144"]]
+  ↳ db/seeds.rb:15
+  [1m[35m (160.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[36mCareer Create (2.1ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Medicina"], ["created_at", "2019-02-11 16:17:27.525241"], ["updated_at", "2019-02-11 16:17:27.525241"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (152.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[36mCareer Create (1.4ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Música"], ["created_at", "2019-02-11 16:17:27.685050"], ["updated_at", "2019-02-11 16:17:27.685050"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (167.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (2.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[36mSubject Create (1.6ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Programación Ruby"], ["summary", "Ésta es una materia sobre Ruby"], ["created_at", "2019-02-11 16:17:27.871615"], ["updated_at", "2019-02-11 16:17:27.871615"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (163.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[36mSubject Create (2.0ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cáncer"], ["summary", "Ésta es una materia sobre el cáncer y sus efectos"], ["created_at", "2019-02-11 16:17:28.042160"], ["updated_at", "2019-02-11 16:17:28.042160"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (150.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:20
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[36mSubject Create (0.8ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Urbanística"], ["summary", "Ésta es una materia sobre urbanística"], ["created_at", "2019-02-11 16:17:28.200054"], ["updated_at", "2019-02-11 16:17:28.200054"]]
+  ↳ db/seeds.rb:21
+  [1m[35m (131.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[36mSubject Create (1.6ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lectoescritura musical"], ["summary", "Ésta es una materia que desarrolla capacidad auditiva y formación teórica"], ["created_at", "2019-02-11 16:17:28.336717"], ["updated_at", "2019-02-11 16:17:28.336717"]]
+  ↳ db/seeds.rb:22
+  [1m[35m (126.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:22
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[36mSubject Create (0.8ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Física cuantica"], ["summary", "Ésta materia nos muestra la naturaleza a escalas espacialmente pequeñas"], ["created_at", "2019-02-11 16:17:28.466957"], ["updated_at", "2019-02-11 16:17:28.466957"]]
+  ↳ db/seeds.rb:23
+  [1m[35m (132.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:25
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[36mRole Load (0.1ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:25
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ db/seeds.rb:25

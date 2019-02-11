@@ -1,12 +1,19 @@
-POST http://localhost:3000/users HTTP/1.1
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NDk4Mjg2NjB9.uSPcYDj6ikrzJj5uUpOIA4wj3oyq9Z3qW3U8eyA5TI4
+POST http://localhost:3000/authenticate HTTP/1.1
 content-type: application/json
 
 {
-    "name":"Iván Yesid",
-    "last_name":"Castellanos Martínez",
-    "email":"iycastellanosm@unal.edu.co",
-    "password":"123123123",
-    "password_confirmation":"123123123",
-    "role_id":"2"
+    "email":"admin@example.com.co",
+    "password":"123456789"
 }
+
+#POST http://localhost:3000/users HTTP/1.1
+#Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NDk5ODU5MzZ9.V08aVom5CAQSfEBCI20ZhYLfidZWVK2V4cL-3hdblL0
+#content-type: application/json
+
+#{
+#    "name":"Iván Yesid",
+#    "last_name":"Castellanos Martínez",
+#    "email":"iycastellanosm@unal.edu.co",
+#    "password_digest":"123123123",
+#    "role_id":"1"
+#}

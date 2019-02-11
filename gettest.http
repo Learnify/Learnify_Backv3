@@ -1,2 +1,9 @@
-GET http://localhost:3000/articles HTTP/1.1
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NDkzMDIzODN9.ZbWyw_hLpsvHNyNMMyr5jF4xEWb4wU4rv6ru6GqXFX0
+GET http://localhost:3000/users HTTP/1.1
+Authorization: token
+
+# http://localhost:3000/users  => List all users
+# http://localhost:3000/users/1 => List user with id 1
+# http://localhost:3000/careers => List all careers
+# http://localhost:3000/careers/1 => List career with id 1
+# http://localhost:3000/subjects => List all subjects
+# http://localhost:3000/subjects/1 => List subject with id 1

@@ -1,5 +1,5 @@
 class CareersController < ApplicationController
-  
+  before_action :set_career, only: [:show, :update, :destroy]
   
   # GET /careers
   def index
@@ -37,4 +37,15 @@ class CareersController < ApplicationController
   def destroy
     @career.destroy
   end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_career
+      @career = Career.find(params[:id])
+    end
+
+    Only allow a trusted parameter "white list" through.
+    def career_params
+      params.require(:career).permit(:name)
+    end
 end

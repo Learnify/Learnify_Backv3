@@ -6,8 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Role.create!(name: 'Estudiante')
 Role.create!(name: 'Profesor')
+Role.create!(name: 'Estudiante')
 
 Career.create!(name: "Ingeniería de Sistemas y Computación")
 Career.create!(name: "Ingeniería Mecatrónica")
@@ -22,6 +22,7 @@ Subject.create!( name:"Urbanística", summary:"Ésta es una materia sobre urban�
 Subject.create( name:"Lectoescritura musical", summary:"Ésta es una materia que desarrolla capacidad auditiva y formación teórica")
 Subject.create( name:"Física cuantica", summary:"Ésta materia nos muestra la naturaleza a escalas espacialmente pequeñas")
 
-User.create!(name: 'Juan Camilo' , last_name: 'Rodríguez Puentes' , email: 'jucrodriguezpu@unal.edu.co' , password: '123123123' , password_confirmation: '123123123' , role_id: 1)
+User.create!(name: 'Admin' , last_name: 'Master', email: 'admin@example.com.co' , password: '123456789' , password_confirmation: '123456789', role_id: 1, career_id: 1)
+User.create!(name: 'Juan Camilo' , last_name: 'Rodríguez Puentes' , email: 'jucrodriguezpu@unal.edu.co' , password: '123123123' , password_confirmation: '123123123' , role_id: 2, career_id: 1)
 
 Article.create!( title:"Programación con ruby", body:"Éste es un artículo de Programación en Ruby", visits_count: 2, user_id: 1)
