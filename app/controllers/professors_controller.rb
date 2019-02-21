@@ -5,7 +5,12 @@ class ProfessorsController < ApplicationController
   end
     
   def show
-     @professors = User.find(params[:id]) 
+     @professor = User.find(params[:id])
+     if(@professor.role_id == 1)
+         render json: @professor
+     else
+         render json: {"Message":"Usuario no es profesor"}
+     end
   end
     
   def create
@@ -25,6 +30,7 @@ class ProfessorsController < ApplicationController
   def edit
       if current_user.admin
         @professor = User.find(params[:id])
+        render json: @professor
       end
   end
 

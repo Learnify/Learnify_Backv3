@@ -10,6 +10,7 @@ class ArticlesController < ApplicationController
 
   # GET /articles/1
   def show
+    @article.update_visits
     render json: @article
   end
 
@@ -46,6 +47,6 @@ class ArticlesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def article_params
-      params.require(:article).permit(:title, :body, :visits_count, :url)
+      params.require(:article).permit(:title, :body, :url)
     end
 end

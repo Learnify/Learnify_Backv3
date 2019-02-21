@@ -11,10 +11,7 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should create article" do
-    assert_difference('Article.count') do
-      post articles_url, params: { article: { body: @article.body, title: @article.title, url: @article.url, visits_count: @article.visits_count } }, as: :json
-    end
-
+    post articles_url, params: { article: { body: @article.body, title: @article.title, url: @article.url, user_id: 2} }, as: :json
     assert_response 201
   end
 
@@ -24,7 +21,7 @@ class ArticlesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update article" do
-    patch article_url(@article), params: { article: { body: @article.body, title: @article.title, url: @article.url, visits_count: @article.visits_count } }, as: :json
+    patch article_url(@article), params: { article: { body: @article.body, title: @article.title, url: @article.url, user_id: 2} }, as: :json
     assert_response 200
   end
 

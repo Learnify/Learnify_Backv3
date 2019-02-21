@@ -1,13 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+admin:
+  name: "Admin"
+  last_name: "Master"
+  email: "admin@example.com.co"
+  password_digest: "123456789"
 
-one:
-  name: MyString
-  last_name: MyString
-  email: MyString
-  password_digest: MyString
-
-two:
-  name: MyString
-  last_name: MyString
-  email: MyString
-  password_digest: MyString
+professorOne:
+  name: "Brian Julian"
+  last_name: "Moreno"
+  email: "bjmorenon@unal.edu.co"
+  password_digest: "123123123"

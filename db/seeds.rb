@@ -27,4 +27,4 @@ User.create!(name: 'Juan Camilo' , last_name: 'Rodríguez Puentes' , email: 'juc
 
 User.create!(name: 'Brian Julian' , last_name: 'Moreno' , email: 'bjmorenon@unal.edu.co' , password: '123123123' , password_confirmation: '123123123' , role_id: 1, career_id: 1)
 
-Article.create!( title:"Programación con ruby", body:"Éste es un artículo de Programación en Ruby", visits_count: 2, user_id: 1)
+Article.create!( title:"Programación con ruby", body:"Éste es un artículo de Programación en Ruby", user_id: 1)

@@ -1,0 +1,1770 @@
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "articles"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (291.7ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "visits_count" integer, "url" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "user_id" integer)[0m
+  [1m[35m (277.9ms)[0m  [1m[35mCREATE  INDEX "index_articles_on_user_id" ON "articles" ("user_id")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "careers"[0m
+  [1m[35m (233.0ms)[0m  [1m[35mCREATE TABLE "careers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "roles"[0m
+  [1m[35m (190.8ms)[0m  [1m[35mCREATE TABLE "roles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "subjects"[0m
+  [1m[35m (232.8ms)[0m  [1m[35mCREATE TABLE "subjects" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "summary" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (199.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "last_name" varchar, "email" varchar NOT NULL, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "role_id" integer, "career_id" integer)[0m
+  [1m[35m (188.7ms)[0m  [1m[35mCREATE  INDEX "index_users_on_career_id" ON "users" ("career_id")[0m
+  [1m[35m (132.5ms)[0m  [1m[35mCREATE  INDEX "index_users_on_role_id" ON "users" ("role_id")[0m
+  [1m[35m (231.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (213.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190211161633)[0m
+  [1m[35m (269.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190208044951),
+(20190203163826),
+(20190208041558),
+(20190208163911),
+(20190208163952),
+(20190211161030),
+(20190203162912);
+
+[0m
+  [1m[35m (300.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2019-02-21 03:07:06.227009"], ["updated_at", "2019-02-21 03:07:06.227009"]]
+  [1m[35m (937.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:07:09.042038', '2019-02-21 03:07:09.042038', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:07:09.042038', '2019-02-21 03:07:09.042038', 298486374)[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2019-02-21 03:07:09.045922', '2019-02-21 03:07:09.045922', 980190962)[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2019-02-21 03:07:09.045922', '2019-02-21 03:07:09.045922', 298486374)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:07:09.050041', '2019-02-21 03:07:09.050041', 980190962)[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:07:09.050041', '2019-02-21 03:07:09.050041', 298486374)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:07:09.054705', '2019-02-21 03:07:09.054705', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:07:09.054705', '2019-02-21 03:07:09.054705', 298486374)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:07:09.060514', '2019-02-21 03:07:09.060514', 980190962)[0m
+  [1m[36mFixture Insert (0.6ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:07:09.060514', '2019-02-21 03:07:09.060514', 298486374)[0m
+  [1m[35m (366.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+RolesControllerTest: test_should_get_index
+------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ArticlesControllerTest: test_should_show_article
+------------------------------------------------
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles/980190962" for 127.0.0.1 at 2019-02-20 22:07:14 -0500
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 1.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_create_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started POST "/articles" for 127.0.0.1 at 2019-02-20 22:07:14 -0500
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"body"=>"MyText", "title"=>"MyString", "url"=>"MyString", "visits_count"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 332ms (Views: 6.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ArticlesControllerTest: test_should_destroy_article
+---------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started DELETE "/articles/980190962" for 127.0.0.1 at 2019-02-20 22:07:14 -0500
+Processing by ArticlesController#destroy as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Destroy (0.6ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 6ms (ActiveRecord: 1.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ArticlesControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles" for 127.0.0.1 at 2019-02-20 22:07:14 -0500
+Processing by ArticlesController#index as JSON
+  Parameters: {"article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_update_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/articles/980190962" for 127.0.0.1 at 2019-02-20 22:07:14 -0500
+Processing by ArticlesController#update as JSON
+  Parameters: {"article"=>{"body"=>"MyText", "title"=>"MyString", "url"=>"MyString", "visits_count"=>1}, "id"=>"980190962"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (1.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 10ms (Views: 0.4ms | ActiveRecord: 2.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (25.0ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:24:05.510818', '2019-02-21 03:24:05.510818', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:24:05.510818', '2019-02-21 03:24:05.510818', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2019-02-21 03:24:05.515242', '2019-02-21 03:24:05.515242', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2019-02-21 03:24:05.515242', '2019-02-21 03:24:05.515242', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:24:05.519830', '2019-02-21 03:24:05.519830', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:24:05.519830', '2019-02-21 03:24:05.519830', 298486374)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:24:05.523256', '2019-02-21 03:24:05.523256', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:24:05.523256', '2019-02-21 03:24:05.523256', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:24:05.528116', '2019-02-21 03:24:05.528116', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:24:05.528116', '2019-02-21 03:24:05.528116', 298486374)[0m
+  [1m[35m (175.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+RolesControllerTest: test_should_get_index
+------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_update_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/articles/980190962" for 127.0.0.1 at 2019-02-20 22:24:07 -0500
+Processing by ArticlesController#update as JSON
+  Parameters: {"article"=>{"body"=>"MyText", "title"=>"MyString", "url"=>"MyString", "visits_count"=>1}, "id"=>"980190962"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 45ms (Views: 0.5ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ArticlesControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles" for 127.0.0.1 at 2019-02-20 22:24:07 -0500
+Processing by ArticlesController#index as JSON
+  Parameters: {"article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ArticlesControllerTest: test_should_destroy_article
+---------------------------------------------------
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started DELETE "/articles/980190962" for 127.0.0.1 at 2019-02-20 22:24:07 -0500
+Processing by ArticlesController#destroy as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_create_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started POST "/articles" for 127.0.0.1 at 2019-02-20 22:24:07 -0500
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"body"=>"MyText", "title"=>"MyString", "url"=>"MyString", "visits_count"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ArticlesControllerTest: test_should_show_article
+------------------------------------------------
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles/980190962" for 127.0.0.1 at 2019-02-20 22:24:07 -0500
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2019-02-20 22:24:07 -0500
+Processing by ArticlesController#index as JSON
+  Parameters: {"article"=>{}}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2019-02-20 22:24:07 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:24:37.010020', '2019-02-21 03:24:37.010020', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:24:37.010020', '2019-02-21 03:24:37.010020', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2019-02-21 03:24:37.013919', '2019-02-21 03:24:37.013919', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2019-02-21 03:24:37.013919', '2019-02-21 03:24:37.013919', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:24:37.017904', '2019-02-21 03:24:37.017904', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:24:37.017904', '2019-02-21 03:24:37.017904', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:24:37.021119', '2019-02-21 03:24:37.021119', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:24:37.021119', '2019-02-21 03:24:37.021119', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:24:37.024879', '2019-02-21 03:24:37.024879', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:24:37.024879', '2019-02-21 03:24:37.024879', 298486374)[0m
+  [1m[35m (112.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/articles" for 127.0.0.1 at 2019-02-20 22:24:37 -0500
+Processing by ArticlesController#index as JSON
+  Parameters: {"article"=>{}}
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.5ms)
+Started GET "/" for 127.0.0.1 at 2019-02-20 22:24:37 -0500
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ArticlesControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles" for 127.0.0.1 at 2019-02-20 22:24:37 -0500
+Processing by ArticlesController#index as JSON
+  Parameters: {"article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ArticlesControllerTest: test_should_show_article
+------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles/980190962" for 127.0.0.1 at 2019-02-20 22:24:37 -0500
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_update_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/articles/980190962" for 127.0.0.1 at 2019-02-20 22:24:37 -0500
+Processing by ArticlesController#update as JSON
+  Parameters: {"article"=>{"body"=>"MyText", "title"=>"MyString", "url"=>"MyString", "visits_count"=>1}, "id"=>"980190962"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 15ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ArticlesControllerTest: test_should_destroy_article
+---------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started DELETE "/articles/980190962" for 127.0.0.1 at 2019-02-20 22:24:37 -0500
+Processing by ArticlesController#destroy as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_create_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started POST "/articles" for 127.0.0.1 at 2019-02-20 22:24:37 -0500
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"body"=>"MyText", "title"=>"MyString", "url"=>"MyString", "visits_count"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 6ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+RolesControllerTest: test_should_get_index
+------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:25:42.324577', '2019-02-21 03:25:42.324577', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:25:42.324577', '2019-02-21 03:25:42.324577', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2019-02-21 03:25:42.328501', '2019-02-21 03:25:42.328501', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2019-02-21 03:25:42.328501', '2019-02-21 03:25:42.328501', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:25:42.333029', '2019-02-21 03:25:42.333029', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:25:42.333029', '2019-02-21 03:25:42.333029', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:25:42.336399', '2019-02-21 03:25:42.336399', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:25:42.336399', '2019-02-21 03:25:42.336399', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:25:42.340087', '2019-02-21 03:25:42.340087', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:25:42.340087', '2019-02-21 03:25:42.340087', 298486374)[0m
+  [1m[35m (121.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-20 22:25:42 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ArticlesControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles" for 127.0.0.1 at 2019-02-20 22:25:42 -0500
+Processing by ArticlesController#index as JSON
+  Parameters: {"article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ArticlesControllerTest: test_should_destroy_article
+---------------------------------------------------
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started DELETE "/articles/980190962" for 127.0.0.1 at 2019-02-20 22:25:42 -0500
+Processing by ArticlesController#destroy as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Destroy (0.4ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 4ms (ActiveRecord: 0.9ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ArticlesControllerTest: test_should_show_article
+------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles/980190962" for 127.0.0.1 at 2019-02-20 22:25:42 -0500
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_update_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/articles/980190962" for 127.0.0.1 at 2019-02-20 22:25:42 -0500
+Processing by ArticlesController#update as JSON
+  Parameters: {"article"=>{"body"=>"MyText", "title"=>"MyString", "url"=>"MyString", "visits_count"=>1}, "id"=>"980190962"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 14ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_create_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started POST "/articles" for 127.0.0.1 at 2019-02-20 22:25:42 -0500
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"body"=>"MyText", "title"=>"MyString", "url"=>"MyString", "visits_count"=>1}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+RolesControllerTest: test_should_get_index
+------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:35:30.351120', '2019-02-21 03:35:30.351120', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:35:30.351120', '2019-02-21 03:35:30.351120', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2019-02-21 03:35:30.355086', '2019-02-21 03:35:30.355086', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2019-02-21 03:35:30.355086', '2019-02-21 03:35:30.355086', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:35:30.359367', '2019-02-21 03:35:30.359367', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:35:30.359367', '2019-02-21 03:35:30.359367', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:35:30.362402', '2019-02-21 03:35:30.362402', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:35:30.362402', '2019-02-21 03:35:30.362402', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:35:30.366098', '2019-02-21 03:35:30.366098', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:35:30.366098', '2019-02-21 03:35:30.366098', 298486374)[0m
+  [1m[35m (132.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-20 22:35:30 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+RolesControllerTest: test_should_get_index
+------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:35:49.172159', '2019-02-21 03:35:49.172159', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:35:49.172159', '2019-02-21 03:35:49.172159', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2019-02-21 03:35:49.176294', '2019-02-21 03:35:49.176294', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', '2019-02-21 03:35:49.176294', '2019-02-21 03:35:49.176294', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:35:49.180513', '2019-02-21 03:35:49.180513', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:35:49.180513', '2019-02-21 03:35:49.180513', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:35:49.183549', '2019-02-21 03:35:49.183549', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:35:49.183549', '2019-02-21 03:35:49.183549', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:35:49.187314', '2019-02-21 03:35:49.187314', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:35:49.187314', '2019-02-21 03:35:49.187314', 298486374)[0m
+  [1m[35m (128.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-20 22:35:49 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:42:31.797528', '2019-02-21 03:42:31.797528', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:42:31.797528', '2019-02-21 03:42:31.797528', 298486374)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Julian', 'Moreno', 'bjmorenon@unal.edu.co', '12345', '2019-02-21 03:42:31.802867', '2019-02-21 03:42:31.802867', 424509941)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:42:31.809036', '2019-02-21 03:42:31.809036', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:42:31.809036', '2019-02-21 03:42:31.809036', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:42:31.826575', '2019-02-21 03:42:31.826575', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:42:31.826575', '2019-02-21 03:42:31.826575', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:42:31.840952', '2019-02-21 03:42:31.840952', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:42:31.840952', '2019-02-21 03:42:31.840952', 298486374)[0m
+  [1m[35m (164.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:47:07.776633', '2019-02-21 03:47:07.776633', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:47:07.776633', '2019-02-21 03:47:07.776633', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Julian', 'Moreno', 'bjmorenon@unal.edu.co', '12345', '2019-02-21 03:47:07.782157', '2019-02-21 03:47:07.782157', 424509941)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:47:07.786399', '2019-02-21 03:47:07.786399', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:47:07.786399', '2019-02-21 03:47:07.786399', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:47:07.789464', '2019-02-21 03:47:07.789464', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 03:47:07.789464', '2019-02-21 03:47:07.789464', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:47:07.793365', '2019-02-21 03:47:07.793365', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 03:47:07.793365', '2019-02-21 03:47:07.793365', 298486374)[0m
+  [1m[35m (195.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-20 22:47:08 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.4ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:03:05.874362', '2019-02-21 04:03:05.874362', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:03:05.874362', '2019-02-21 04:03:05.874362', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Julian', 'Moreno', 'bjmorenon@unal.edu.co', '12345', '2019-02-21 04:03:05.878470', '2019-02-21 04:03:05.878470', 424509941)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:03:05.883090', '2019-02-21 04:03:05.883090', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:03:05.883090', '2019-02-21 04:03:05.883090', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:03:05.886092', '2019-02-21 04:03:05.886092', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:03:05.886092', '2019-02-21 04:03:05.886092', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:03:05.890180', '2019-02-21 04:03:05.890180', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:03:05.890180', '2019-02-21 04:03:05.890180', 298486374)[0m
+  [1m[35m (121.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-20 23:03:06 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:18:29.514030', '2019-02-21 04:18:29.514030', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:18:29.514030', '2019-02-21 04:18:29.514030', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Julian', 'Moreno', 'bjmorenon@unal.edu.co', '12345', '2019-02-21 04:18:29.517816', '2019-02-21 04:18:29.517816', 424509941)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:18:29.521611', '2019-02-21 04:18:29.521611', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:18:29.521611', '2019-02-21 04:18:29.521611', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:18:29.524830', '2019-02-21 04:18:29.524830', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:18:29.524830', '2019-02-21 04:18:29.524830', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:18:29.528935', '2019-02-21 04:18:29.528935', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:18:29.528935', '2019-02-21 04:18:29.528935', 298486374)[0m
+  [1m[35m (128.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-20 23:18:29 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 5ms (Views: 2.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:19:57.784369', '2019-02-21 04:19:57.784369', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:19:57.784369', '2019-02-21 04:19:57.784369', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Julian', 'Moreno', 'bjmorenon@unal.edu.co', '12345', '2019-02-21 04:19:57.788144', '2019-02-21 04:19:57.788144', 424509941)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:19:57.792080', '2019-02-21 04:19:57.792080', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:19:57.792080', '2019-02-21 04:19:57.792080', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:19:57.795818', '2019-02-21 04:19:57.795818', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:19:57.795818', '2019-02-21 04:19:57.795818', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:19:57.799923', '2019-02-21 04:19:57.799923', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:19:57.799923', '2019-02-21 04:19:57.799923', 298486374)[0m
+  [1m[35m (139.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-20 23:19:58 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:20:49.577040', '2019-02-21 04:20:49.577040', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:20:49.577040', '2019-02-21 04:20:49.577040', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Julian', 'Moreno', 'bjmorenon@unal.edu.co', '12345', '2019-02-21 04:20:49.580910', '2019-02-21 04:20:49.580910', 424509941)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:20:49.584959', '2019-02-21 04:20:49.584959', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:20:49.584959', '2019-02-21 04:20:49.584959', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:20:49.588313', '2019-02-21 04:20:49.588313', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:20:49.588313', '2019-02-21 04:20:49.588313', 298486374)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:20:49.592046', '2019-02-21 04:20:49.592046', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:20:49.592046', '2019-02-21 04:20:49.592046', 298486374)[0m
+  [1m[35m (148.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-20 23:20:49 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.6ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.5ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:21:16.169328', '2019-02-21 04:21:16.169328', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:21:16.169328', '2019-02-21 04:21:16.169328', 298486374)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Julian', 'Moreno', 'bjmorenon@unal.edu.co', '12345', '2019-02-21 04:21:16.174842', '2019-02-21 04:21:16.174842', 424509941)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:21:16.180530', '2019-02-21 04:21:16.180530', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:21:16.180530', '2019-02-21 04:21:16.180530', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:21:16.184599', '2019-02-21 04:21:16.184599', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:21:16.184599', '2019-02-21 04:21:16.184599', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:21:16.189254', '2019-02-21 04:21:16.189254', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:21:16.189254', '2019-02-21 04:21:16.189254', 298486374)[0m
+  [1m[35m (150.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-20 23:21:16 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (76.2ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:45:37.590179', '2019-02-21 04:45:37.590179', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:45:37.590179', '2019-02-21 04:45:37.590179', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Brian Julian', 'Moreno', 'bjmorenon@unal.edu.co', '123123123', '2019-02-21 04:45:37.594126', '2019-02-21 04:45:37.594126', 424509941)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:45:37.597938', '2019-02-21 04:45:37.597938', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:45:37.597938', '2019-02-21 04:45:37.597938', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:45:37.601128', '2019-02-21 04:45:37.601128', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:45:37.601128', '2019-02-21 04:45:37.601128', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:45:37.604898', '2019-02-21 04:45:37.604898', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:45:37.604898', '2019-02-21 04:45:37.604898', 298486374)[0m
+  [1m[35m (518.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-20 23:45:41 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (13.6ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:51:59.363175', '2019-02-21 04:51:59.363175', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:51:59.363175', '2019-02-21 04:51:59.363175', 298486374)[0m
+  [1m[36mFixture Insert (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Brian Julian', 'Moreno', 'bjmorenon@unal.edu.co', '123123123', '2019-02-21 04:51:59.367731', '2019-02-21 04:51:59.367731', 424509941)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:51:59.372023', '2019-02-21 04:51:59.372023', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:51:59.372023', '2019-02-21 04:51:59.372023', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:51:59.375196', '2019-02-21 04:51:59.375196', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:51:59.375196', '2019-02-21 04:51:59.375196', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:51:59.379316', '2019-02-21 04:51:59.379316', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:51:59.379316', '2019-02-21 04:51:59.379316', 298486374)[0m
+  [1m[35m (208.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+Started GET "/articles/424509941" for 127.0.0.1 at 2019-02-20 23:52:01 -0500
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"424509941", "article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-20 23:52:01 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:52:44.624968', '2019-02-21 04:52:44.624968', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:52:44.624968', '2019-02-21 04:52:44.624968', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Brian Julian', 'Moreno', 'bjmorenon@unal.edu.co', '123123123', '2019-02-21 04:52:44.628900', '2019-02-21 04:52:44.628900', 424509941)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:52:44.632800', '2019-02-21 04:52:44.632800', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:52:44.632800', '2019-02-21 04:52:44.632800', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:52:44.636415', '2019-02-21 04:52:44.636415', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:52:44.636415', '2019-02-21 04:52:44.636415', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:52:44.640174', '2019-02-21 04:52:44.640174', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:52:44.640174', '2019-02-21 04:52:44.640174', 298486374)[0m
+  [1m[35m (121.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-20 23:52:44 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+Started GET "/professors.424509941" for 127.0.0.1 at 2019-02-20 23:52:44 -0500
+Processing by ProfessorsController#index as 
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:58:17.518066', '2019-02-21 04:58:17.518066', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:58:17.518066', '2019-02-21 04:58:17.518066', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Admin', 'Master', 'admin@example.com.co', '123456789', '2019-02-21 04:58:17.522105', '2019-02-21 04:58:17.522105', 135138680)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:58:17.526626', '2019-02-21 04:58:17.526626', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:58:17.526626', '2019-02-21 04:58:17.526626', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:58:17.530333', '2019-02-21 04:58:17.530333', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:58:17.530333', '2019-02-21 04:58:17.530333', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:58:17.534140', '2019-02-21 04:58:17.534140', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:58:17.534140', '2019-02-21 04:58:17.534140', 298486374)[0m
+  [1m[35m (240.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+RolesControllerTest: test_should_get_index
+------------------------------------------
+Started GET "/roles" for 127.0.0.1 at 2019-02-20 23:58:17 -0500
+Processing by RolesController#index as HTML
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles"[0m
+Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-20 23:58:17 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:59:09.772082', '2019-02-21 04:59:09.772082', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:59:09.772082', '2019-02-21 04:59:09.772082', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Admin', 'Master', 'admin@example.com.co', '123456789', '2019-02-21 04:59:09.776517', '2019-02-21 04:59:09.776517', 135138680)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Brian Julian', 'Moreno', 'bjmorenon@unal.edu.co', '123123123', '2019-02-21 04:59:09.776517', '2019-02-21 04:59:09.776517', 424509941)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:59:09.780327', '2019-02-21 04:59:09.780327', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:59:09.780327', '2019-02-21 04:59:09.780327', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:59:09.783496', '2019-02-21 04:59:09.783496', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 04:59:09.783496', '2019-02-21 04:59:09.783496', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:59:09.787643', '2019-02-21 04:59:09.787643', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 04:59:09.787643', '2019-02-21 04:59:09.787643', 298486374)[0m
+  [1m[35m (222.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-20 23:59:10 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+Started GET "/professors.424509941" for 127.0.0.1 at 2019-02-20 23:59:10 -0500
+Processing by ProfessorsController#index as 
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+RolesControllerTest: test_should_get_index
+------------------------------------------
+Started GET "/roles" for 127.0.0.1 at 2019-02-20 23:59:10 -0500
+Processing by RolesController#index as HTML
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles"[0m
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (22.2ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:05:05.388169', '2019-02-21 05:05:05.388169', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:05:05.388169', '2019-02-21 05:05:05.388169', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Admin', 'Master', 'admin@example.com.co', '123456789', '2019-02-21 05:05:05.392339', '2019-02-21 05:05:05.392339', 135138680)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Brian Julian', 'Moreno', 'bjmorenon@unal.edu.co', '123123123', '2019-02-21 05:05:05.392339', '2019-02-21 05:05:05.392339', 424509941)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:05:05.396539', '2019-02-21 05:05:05.396539', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:05:05.396539', '2019-02-21 05:05:05.396539', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 05:05:05.399930', '2019-02-21 05:05:05.399930', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 1, 'MyString', '2019-02-21 05:05:05.399930', '2019-02-21 05:05:05.399930', 298486374)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:05:05.404642', '2019-02-21 05:05:05.404642', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:05:05.404642', '2019-02-21 05:05:05.404642', 298486374)[0m
+  [1m[35m (249.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-21 00:05:07 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+Started GET "/professors.424509941" for 127.0.0.1 at 2019-02-21 00:05:07 -0500
+Processing by ProfessorsController#index as 
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+RolesControllerTest: test_should_get_index
+------------------------------------------
+Started GET "/roles" for 127.0.0.1 at 2019-02-21 00:05:07 -0500
+Processing by RolesController#index as HTML
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles"[0m
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_create_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started POST "/articles" for 127.0.0.1 at 2019-02-21 00:05:07 -0500
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"body"=>"MyText", "title"=>"MyString", "url"=>"MyString", "visits_count"=>1}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 140ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ArticlesControllerTest: test_should_destroy_article
+---------------------------------------------------
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started DELETE "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:05:07 -0500
+Processing by ArticlesController#destroy as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.1ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ArticlesControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles" for 127.0.0.1 at 2019-02-21 00:05:07 -0500
+Processing by ArticlesController#index as JSON
+  Parameters: {"article"=>{}}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ArticlesControllerTest: test_should_show_article
+------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:05:07 -0500
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_update_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:05:07 -0500
+Processing by ArticlesController#update as JSON
+  Parameters: {"article"=>{"body"=>"MyText", "title"=>"MyString", "url"=>"MyString", "visits_count"=>1}, "id"=>"980190962"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.3ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:10:51.047691', '2019-02-21 05:10:51.047691', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:10:51.047691', '2019-02-21 05:10:51.047691', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Admin', 'Master', 'admin@example.com.co', '123456789', '2019-02-21 05:10:51.051745', '2019-02-21 05:10:51.051745', 135138680)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Brian Julian', 'Moreno', 'bjmorenon@unal.edu.co', '123123123', '2019-02-21 05:10:51.051745', '2019-02-21 05:10:51.051745', 424509941)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:10:51.055519', '2019-02-21 05:10:51.055519', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:10:51.055519', '2019-02-21 05:10:51.055519', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "url", "created_at", "updated_at", "id") VALUES ('Articulo de prueba', 'Este es un articulo de prueba', 'Erace una vez un url', '2019-02-21 05:10:51.058557', '2019-02-21 05:10:51.058557', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2019-02-21 05:10:51.058557', '2019-02-21 05:10:51.058557', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:10:51.062696', '2019-02-21 05:10:51.062696', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:10:51.062696', '2019-02-21 05:10:51.062696', 298486374)[0m
+  [1m[35m (154.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+RolesControllerTest: test_should_get_index
+------------------------------------------
+Started GET "/roles" for 127.0.0.1 at 2019-02-21 00:10:51 -0500
+Processing by RolesController#index as HTML
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT "roles".* FROM "roles"[0m
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ArticlesControllerTest: test_should_destroy_article
+---------------------------------------------------
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started DELETE "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:10:51 -0500
+Processing by ArticlesController#destroy as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.0ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ArticlesControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles" for 127.0.0.1 at 2019-02-21 00:10:51 -0500
+Processing by ArticlesController#index as JSON
+  Parameters: {"article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_update_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:10:51 -0500
+Processing by ArticlesController#update as JSON
+  Parameters: {"article"=>{"body"=>"Este es un articulo de prueba", "title"=>"Articulo de prueba", "url"=>"Erace una vez un url", "visits_count"=>nil}, "id"=>"980190962"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Unpermitted parameter: :visits_count
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 14ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_create_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started POST "/articles" for 127.0.0.1 at 2019-02-21 00:10:51 -0500
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"body"=>"Este es un articulo de prueba", "title"=>"Articulo de prueba", "url"=>"Erace una vez un url"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ArticlesControllerTest: test_should_show_article
+------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:10:51 -0500
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-21 00:10:51 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+Started GET "/professors.424509941" for 127.0.0.1 at 2019-02-21 00:10:51 -0500
+Processing by ProfessorsController#index as 
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (1.6ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:11:37.729299', '2019-02-21 05:11:37.729299', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:11:37.729299', '2019-02-21 05:11:37.729299', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Admin', 'Master', 'admin@example.com.co', '123456789', '2019-02-21 05:11:37.733685', '2019-02-21 05:11:37.733685', 135138680)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Brian Julian', 'Moreno', 'bjmorenon@unal.edu.co', '123123123', '2019-02-21 05:11:37.733685', '2019-02-21 05:11:37.733685', 424509941)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:11:37.739795', '2019-02-21 05:11:37.739795', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:11:37.739795', '2019-02-21 05:11:37.739795', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "url", "created_at", "updated_at", "id") VALUES ('Articulo de prueba', 'Este es un articulo de prueba', 'Erace una vez un url', '2019-02-21 05:11:37.744459', '2019-02-21 05:11:37.744459', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2019-02-21 05:11:37.744459', '2019-02-21 05:11:37.744459', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:11:37.749957', '2019-02-21 05:11:37.749957', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:11:37.749957', '2019-02-21 05:11:37.749957', 298486374)[0m
+  [1m[35m (129.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+RolesControllerTest: test_should_get_index
+------------------------------------------
+Started GET "/roles" for 127.0.0.1 at 2019-02-21 00:11:38 -0500
+Processing by RolesController#index as HTML
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT "roles".* FROM "roles"[0m
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-21 00:11:38 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+Started GET "/professors.424509941" for 127.0.0.1 at 2019-02-21 00:11:38 -0500
+Processing by ProfessorsController#index as 
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_update_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:11:38 -0500
+Processing by ArticlesController#update as JSON
+  Parameters: {"article"=>{"body"=>"Este es un articulo de prueba", "title"=>"Articulo de prueba", "url"=>"Erace una vez un url", "visits_count"=>nil}, "id"=>"980190962"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Unpermitted parameter: :visits_count
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 15ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ArticlesControllerTest: test_should_destroy_article
+---------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started DELETE "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:11:38 -0500
+Processing by ArticlesController#destroy as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.3ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_create_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started POST "/articles" for 127.0.0.1 at 2019-02-21 00:11:38 -0500
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"body"=>"Este es un articulo de prueba", "title"=>"Articulo de prueba", "url"=>"Erace una vez un url"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ArticlesControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles" for 127.0.0.1 at 2019-02-21 00:11:38 -0500
+Processing by ArticlesController#index as JSON
+  Parameters: {"article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ArticlesControllerTest: test_should_show_article
+------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:11:38 -0500
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.7ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:12:06.603514', '2019-02-21 05:12:06.603514', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:12:06.603514', '2019-02-21 05:12:06.603514', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Admin', 'Master', 'admin@example.com.co', '123456789', '2019-02-21 05:12:06.607351', '2019-02-21 05:12:06.607351', 135138680)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Brian Julian', 'Moreno', 'bjmorenon@unal.edu.co', '123123123', '2019-02-21 05:12:06.607351', '2019-02-21 05:12:06.607351', 424509941)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:12:06.611352', '2019-02-21 05:12:06.611352', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:12:06.611352', '2019-02-21 05:12:06.611352', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "url", "created_at", "updated_at", "id") VALUES ('Articulo de prueba', 'Este es un articulo de prueba', 'Erace una vez un url', '2019-02-21 05:12:06.615040', '2019-02-21 05:12:06.615040', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2019-02-21 05:12:06.615040', '2019-02-21 05:12:06.615040', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:12:06.618798', '2019-02-21 05:12:06.618798', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:12:06.618798', '2019-02-21 05:12:06.618798', 298486374)[0m
+  [1m[35m (134.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+Started GET "/professors.424509941" for 127.0.0.1 at 2019-02-21 00:12:06 -0500
+Processing by ProfessorsController#index as 
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-21 00:12:06 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+RolesControllerTest: test_should_get_index
+------------------------------------------
+Started GET "/roles" for 127.0.0.1 at 2019-02-21 00:12:06 -0500
+Processing by RolesController#index as HTML
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles"[0m
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ArticlesControllerTest: test_should_destroy_article
+---------------------------------------------------
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started DELETE "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:12:07 -0500
+Processing by ArticlesController#destroy as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 6ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ArticlesControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles" for 127.0.0.1 at 2019-02-21 00:12:07 -0500
+Processing by ArticlesController#index as JSON
+  Parameters: {"article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ArticlesControllerTest: test_should_show_article
+------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:12:07 -0500
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_update_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:12:07 -0500
+Processing by ArticlesController#update as JSON
+  Parameters: {"article"=>{"body"=>"Este es un articulo de prueba", "title"=>"Articulo de prueba", "url"=>"Erace una vez un url", "visits_count"=>nil}, "id"=>"980190962"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Unpermitted parameter: :visits_count
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 14ms (Views: 0.4ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_create_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started POST "/articles" for 127.0.0.1 at 2019-02-21 00:12:07 -0500
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"body"=>"Este es un articulo de prueba", "title"=>"Articulo de prueba", "url"=>"Erace una vez un url"}}
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:12:25.997198', '2019-02-21 05:12:25.997198', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:12:25.997198', '2019-02-21 05:12:25.997198', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Admin', 'Master', 'admin@example.com.co', '123456789', '2019-02-21 05:12:26.001658', '2019-02-21 05:12:26.001658', 135138680)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Brian Julian', 'Moreno', 'bjmorenon@unal.edu.co', '123123123', '2019-02-21 05:12:26.001658', '2019-02-21 05:12:26.001658', 424509941)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:12:26.005649', '2019-02-21 05:12:26.005649', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:12:26.005649', '2019-02-21 05:12:26.005649', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "url", "created_at", "updated_at", "id") VALUES ('Articulo de prueba', 'Este es un articulo de prueba', 'Erace una vez un url', '2019-02-21 05:12:26.008801', '2019-02-21 05:12:26.008801', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2019-02-21 05:12:26.008801', '2019-02-21 05:12:26.008801', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:12:26.012846', '2019-02-21 05:12:26.012846', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:12:26.012846', '2019-02-21 05:12:26.012846', 298486374)[0m
+  [1m[35m (158.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+RolesControllerTest: test_should_get_index
+------------------------------------------
+Started GET "/roles" for 127.0.0.1 at 2019-02-21 00:12:26 -0500
+Processing by RolesController#index as HTML
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles"[0m
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-21 00:12:26 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+Started GET "/professors.424509941" for 127.0.0.1 at 2019-02-21 00:12:26 -0500
+Processing by ProfessorsController#index as 
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ArticlesControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles" for 127.0.0.1 at 2019-02-21 00:12:26 -0500
+Processing by ArticlesController#index as JSON
+  Parameters: {"article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_update_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:12:26 -0500
+Processing by ArticlesController#update as JSON
+  Parameters: {"article"=>{"body"=>"Este es un articulo de prueba", "title"=>"Articulo de prueba", "url"=>"Erace una vez un url", "visits_count"=>nil}, "id"=>"980190962"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Unpermitted parameter: :visits_count
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 14ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ArticlesControllerTest: test_should_show_article
+------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:12:26 -0500
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_create_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started POST "/articles" for 127.0.0.1 at 2019-02-21 00:12:26 -0500
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"body"=>"Este es un articulo de prueba", "title"=>"Articulo de prueba", "url"=>"Erace una vez un url"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 5ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ArticlesControllerTest: test_should_destroy_article
+---------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started DELETE "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:12:26 -0500
+Processing by ArticlesController#destroy as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 5ms (ActiveRecord: 1.3ms)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (1.8ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:16:36.888146', '2019-02-21 05:16:36.888146', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:16:36.888146', '2019-02-21 05:16:36.888146', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Admin', 'Master', 'admin@example.com.co', '123456789', '2019-02-21 05:16:36.892771', '2019-02-21 05:16:36.892771', 135138680)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Brian Julian', 'Moreno', 'bjmorenon@unal.edu.co', '123123123', '2019-02-21 05:16:36.892771', '2019-02-21 05:16:36.892771', 424509941)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:16:36.896879', '2019-02-21 05:16:36.896879', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:16:36.896879', '2019-02-21 05:16:36.896879', 298486374)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "url", "user_id", "created_at", "updated_at", "id") VALUES ('Articulo de prueba', 'Este es un articulo de prueba', 'Erace una vez un url', 2, '2019-02-21 05:16:36.899943', '2019-02-21 05:16:36.899943', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2019-02-21 05:16:36.899943', '2019-02-21 05:16:36.899943', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:16:36.903699', '2019-02-21 05:16:36.903699', 980190962)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:16:36.903699', '2019-02-21 05:16:36.903699', 298486374)[0m
+  [1m[35m (230.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+RolesControllerTest: test_should_get_index
+------------------------------------------
+Started GET "/roles" for 127.0.0.1 at 2019-02-21 00:16:37 -0500
+Processing by RolesController#index as HTML
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles"[0m
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+Started GET "/professors.424509941" for 127.0.0.1 at 2019-02-21 00:16:37 -0500
+Processing by ProfessorsController#index as 
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-21 00:16:37 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ArticlesControllerTest: test_should_destroy_article
+---------------------------------------------------
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started DELETE "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:16:37 -0500
+Processing by ArticlesController#destroy as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Destroy (2.2ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 7ms (ActiveRecord: 2.8ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (1.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ArticlesControllerTest: test_should_show_article
+------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:16:37 -0500
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_create_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started POST "/articles" for 127.0.0.1 at 2019-02-21 00:16:37 -0500
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"body"=>"Este es un articulo de prueba", "title"=>"Articulo de prueba", "url"=>"Erace una vez un url", "user_id"=>2}}
+Unpermitted parameter: :user_id
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 14ms (Views: 0.4ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ArticlesControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles" for 127.0.0.1 at 2019-02-21 00:16:37 -0500
+Processing by ArticlesController#index as JSON
+  Parameters: {"article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_update_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:16:37 -0500
+Processing by ArticlesController#update as JSON
+  Parameters: {"article"=>{"body"=>"Este es un articulo de prueba", "title"=>"Articulo de prueba", "url"=>"Erace una vez un url", "user_id"=>2}, "id"=>"980190962"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Unpermitted parameter: :user_id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 41ms (Views: 0.4ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.8ms)[0m  [1m[31mDELETE FROM "careers"[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "users"[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "subjects"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "articles"[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "roles"[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:17:26.358432', '2019-02-21 05:17:26.358432', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:17:26.358432', '2019-02-21 05:17:26.358432', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Admin', 'Master', 'admin@example.com.co', '123456789', '2019-02-21 05:17:26.362793', '2019-02-21 05:17:26.362793', 135138680)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "last_name", "email", "password_digest", "created_at", "updated_at", "id") VALUES ('Brian Julian', 'Moreno', 'bjmorenon@unal.edu.co', '123123123', '2019-02-21 05:17:26.362793', '2019-02-21 05:17:26.362793', 424509941)[0m
+  [1m[36mFixture Insert (0.3ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:17:26.367022', '2019-02-21 05:17:26.367022', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "subjects" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:17:26.367022', '2019-02-21 05:17:26.367022', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "url", "created_at", "updated_at", "id") VALUES ('Articulo de prueba', 'Este es un articulo de prueba', 'Erace una vez un url', '2019-02-21 05:17:26.370500', '2019-02-21 05:17:26.370500', 980190962)[0m
+  [1m[36mFixture Insert (0.4ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "url", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', 'MyString', '2019-02-21 05:17:26.370500', '2019-02-21 05:17:26.370500', 298486374)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:17:26.374243', '2019-02-21 05:17:26.374243', 980190962)[0m
+  [1m[36mFixture Insert (0.2ms)[0m  [1m[32mINSERT INTO "roles" ("name", "created_at", "updated_at", "id") VALUES ('MyString', '2019-02-21 05:17:26.374243', '2019-02-21 05:17:26.374243', 298486374)[0m
+  [1m[35m (142.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ArticlesControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mArticle Load (0.6ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles" for 127.0.0.1 at 2019-02-21 00:17:26 -0500
+Processing by ArticlesController#index as JSON
+  Parameters: {"article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ArticlesControllerTest: test_should_show_article
+------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:17:26 -0500
+Processing by ArticlesController#show as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_create_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started POST "/articles" for 127.0.0.1 at 2019-02-21 00:17:26 -0500
+Processing by ArticlesController#create as JSON
+  Parameters: {"article"=>{"body"=>"Este es un articulo de prueba", "title"=>"Articulo de prueba", "url"=>"Erace una vez un url", "user_id"=>2}}
+Unpermitted parameter: :user_id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 14ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ArticlesControllerTest: test_should_destroy_article
+---------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+Started DELETE "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:17:26 -0500
+Processing by ArticlesController#destroy as JSON
+  Parameters: {"id"=>"980190962", "article"=>{}}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mArticle Destroy (0.5ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Completed 204 No Content in 4ms (ActiveRecord: 1.2ms)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "articles"[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ArticlesControllerTest: test_should_update_article
+--------------------------------------------------
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/articles/980190962" for 127.0.0.1 at 2019-02-21 00:17:26 -0500
+Processing by ArticlesController#update as JSON
+  Parameters: {"article"=>{"body"=>"Este es un articulo de prueba", "title"=>"Articulo de prueba", "url"=>"Erace una vez un url", "user_id"=>2}, "id"=>"980190962"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT  "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Unpermitted parameter: :user_id
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 422 Unprocessable Entity in 7ms (Views: 0.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+RolesControllerTest: test_should_get_index
+------------------------------------------
+Started GET "/roles" for 127.0.0.1 at 2019-02-21 00:17:26 -0500
+Processing by RolesController#index as HTML
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles"[0m
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+ProfessorControllerTest: test_should_get_index
+----------------------------------------------
+Started GET "/professors" for 127.0.0.1 at 2019-02-21 00:17:26 -0500
+Processing by ProfessorsController#index as JSON
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProfessorControllerTest: test_should_get_show
+---------------------------------------------
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 424509941], ["LIMIT", 1]]
+Started GET "/professors.424509941" for 127.0.0.1 at 2019-02-21 00:17:26 -0500
+Processing by ProfessorsController#index as 
+  Parameters: {"professor"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role_id" = ?[0m  [["role_id", 1]]
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
