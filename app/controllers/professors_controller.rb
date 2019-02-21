@@ -4,6 +4,10 @@ class ProfessorsController < ApplicationController
       render json: @professors
   end
     
+  def show
+     @professors = User.find(params[:id]) 
+  end
+    
   def create
     if current_user.admin
         @professor = User.new(professor_params)
@@ -17,11 +21,29 @@ class ProfessorsController < ApplicationController
         #No tiene permisos para crear profesores
     end
   end
+    
+  def edit
+      if current_user.admin
+        @professor = User.find(params[:id])
+      end
+  end
+
+  def update
+    if current_user.admin
+        if @user.update(user_params)
+          render json: @user
+        else
+          render json: @user.errors, status: :unprocessable_entity
+        end
+    end
+  end
 
   # DELETE /users/1
   def destroy
-    @professor = User.find(params[:id])
-    @professor.destroy
+    if current_user.admin
+        @professor = User.find(params[:id])
+        @professor.destroy
+    end
   end
 
   private
