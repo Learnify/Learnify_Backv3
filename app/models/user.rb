@@ -5,6 +5,7 @@ class User < ApplicationRecord
     belongs_to :role
     belongs_to :career
     has_many :article
+    has_many :subjects
     
     def nombre 
         email.split('@')[0].upcase    
