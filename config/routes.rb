@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :professors
   resources :articles
+  resources :tutorials  
   resources :careers
   resources :subjects
   resources :users

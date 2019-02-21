@@ -25,7 +25,7 @@ module LearnifyBackv3
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'https://learnify-backv3.herokuapp.com/', 'http://192.168.0.5:3000', 'http://localhost:3000'
+        origins 'https://learnify-backv3.herokuapp.com/', 'http://127.0.0.1:3000', 'http://localhost:3000'
         resource '*', headers: :any, methods: [:get, :post, :options]
       end
     end
