@@ -1,5 +1,5 @@
 GET http://localhost:3000/users HTTP/1.1
-Authorization: token
+Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1NTExMjUxMDl9.xYQ7-LYRGT7I3n6T4rebKVUYjLob-GgG67AcCDWW7YI
 
 # http://localhost:3000/users  => List all users
 # http://localhost:3000/users/1 => List user with id 1
