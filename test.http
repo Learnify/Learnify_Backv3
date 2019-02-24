@@ -6,15 +6,26 @@
 #     "password":"123456789"
 # }
 
-POST http://localhost:3000/users HTTP/1.1
-Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTAwMDI4ODJ9.Q_mOW7IX9hawcbBM-7S8kyxphnq0dxBR3xh2otN3XXI
-content-type: application/json
+# POST http://localhost:3000/users HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTExMTgyNjN9.cBqv014jHDQ7xfMgy1C2NQYHL7t_5eFRZUBNeO4Z96I
+# content-type: application/json
 
-{
-   "name":"Iván Yesid",
-   "last_name":"Castellanos Martínez",
-   "email":"iycastellanosm@unal.edu.co",
-   "password_digest":"123456789",
-   "role_id":"1",
-   "career_id":"1"
-}
+# { "user": 
+#    {
+#       "name":"Iván Yesid",
+#       "last_name":"Castellanos Martínez",
+#       "email":"iycastellanosm@unal.edu.co",
+#       "password":"123456789",
+#       "password_confirmation":"123456789",
+#       "role_id":"1",
+#       "career_id":"1"
+#    }
+# }
+
+# POST http://localhost:3000/authenticate HTTP/1.1
+# content-type: application/json
+
+# {
+#     "email":"iycastellanosm@unal.edu.co",
+#     "password":"123456789"
+# }

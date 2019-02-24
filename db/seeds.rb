@@ -16,15 +16,14 @@ Career.create!(name: "Arquitectura")
 Career.create!(name:"Medicina")
 Career.create!(name:"Música")
 
-Subject.create!( name:"Programación Ruby", summary:"Ésta es una materia sobre Ruby")
-Subject.create!( name:"Cáncer", summary:"Ésta es una materia sobre el cáncer y sus efectos")
-Subject.create!( name:"Urbanística", summary:"Ésta es una materia sobre urbanística")
-Subject.create( name:"Lectoescritura musical", summary:"Ésta es una materia que desarrolla capacidad auditiva y formación teórica")
-Subject.create( name:"Física cuantica", summary:"Ésta materia nos muestra la naturaleza a escalas espacialmente pequeñas")
-
 User.create!(name: 'Admin' , last_name: 'Master', email: 'admin@example.com.co' , password: '123456789' , password_confirmation: '123456789', role_id: 1, career_id: 1)
 User.create!(name: 'Juan Camilo' , last_name: 'Rodríguez Puentes' , email: 'jucrodriguezpu@unal.edu.co' , password: '123123123' , password_confirmation: '123123123' , role_id: 2, career_id: 1)
-
 User.create!(name: 'Brian Julian' , last_name: 'Moreno' , email: 'bjmorenon@unal.edu.co' , password: '123123123' , password_confirmation: '123123123' , role_id: 1, career_id: 1)
 
-Article.create!( title:"Programación con ruby", body:"Éste es un artículo de Programación en Ruby", user_id: 1)
+Subject.create!( name:"Programación Ruby", summary:"Ésta es una materia sobre Ruby", user_id: 2)
+Subject.create!( name:"Cáncer", summary:"Ésta es una materia sobre el cáncer y sus efectos", user_id: 3)
+Subject.create!( name:"Urbanística", summary:"Ésta es una materia sobre urbanística", user_id: 2)
+Subject.create( name:"Lectoescritura musical", summary:"Ésta es una materia que desarrolla capacidad auditiva y formación teórica", user_id: 3)
+Subject.create( name:"Física cuantica", summary:"Ésta materia nos muestra la naturaleza a escalas espacialmente pequeñas", user_id: 2)
+
+Article.create!( title:"Programación con ruby", body:"Éste es un artículo de Programación en Ruby", visits_count: 0, url: "https://github.com/Juankmilo97/DeviseGemTutorial", user_id: 1)
