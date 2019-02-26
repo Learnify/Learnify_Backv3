@@ -1,9 +1,19 @@
-GET http://localhost:3000/users HTTP/1.1
-Authorization: token
+# GET http://localhost:3000/subjects HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NTEyNjkyNTV9.Z9GpHUoncL2Fdyd3Q3PJA1Dc82w7nnepyypOB1K7rv0
+
+# LISTAR TODOS LOS CURSOS DISPONIBLES EN LEARNIFY
+# http://localhost:3000/subjects => List all subjects
+
+# LISTAR INFO DE UN CURSO EN ESPECIFICO
+# http://localhost:3000/subjects/1 => List subject with id 1
+
+# LISTAR PROFESORES DISPONIBLES EN LEARNIFY
+# http://localhost:3000/professors
+
+# LISTAR UN PROFESOR ESPECÍFICO EN LEARNIFY
+# http://localhost:3000/professors/2
 
 # http://localhost:3000/users  => List all users
 # http://localhost:3000/users/1 => List user with id 1
 # http://localhost:3000/careers => List all careers
 # http://localhost:3000/careers/1 => List career with id 1
-# http://localhost:3000/subjects => List all subjects
-# http://localhost:3000/subjects/1 => List subject with id 1

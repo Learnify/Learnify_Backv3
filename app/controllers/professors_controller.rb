@@ -1,13 +1,13 @@
 class ProfessorsController < ApplicationController
   def index
       @professors = User.where(role_id: 1)
-      render json: @professors
+      render json: @professors.as_json(except: [:password_digest, :created_at, :updated_at])
   end
     
   def show
      @professor = User.find(params[:id])
      if(@professor.role_id == 1)
-         render json: @professor
+         render json: @professor.as_json(except: [:password_digest, :created_at, :updated_at])
      else
          render json: {"Message":"Usuario no es profesor"}
      end

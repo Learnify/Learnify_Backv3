@@ -44,7 +44,7 @@ class CareersController < ApplicationController
       @career = Career.find(params[:id])
     end
 
-    Only allow a trusted parameter "white list" through.
+    # Only allow a trusted parameter "white list" through.
     def career_params
       params.require(:career).permit(:name)
     end
