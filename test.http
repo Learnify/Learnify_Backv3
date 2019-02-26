@@ -1,4 +1,4 @@
-# POST http://localhost:3000/authenticate HTTP/1.1
+# POST http://learnify-backv3.herokuapp.com:21909/authenticate HTTP/1.1
 # content-type: application/json
 
 # {
