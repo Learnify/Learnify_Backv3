@@ -1,15 +1,26 @@
 class ProfessorsController < ApplicationController
   def index
       @professors = User.where(role_id: 1)
-      render json: @professors.as_json(except: [:password_digest, :created_at, :updated_at])
+      render json: @professors.as_json(except: [:password_digest, :updated_at, :role_id, :career_id], include: { career: {only: [:name]}, role: {only: [:name]}})
   end
     
   def show
      @professor = User.find(params[:id])
      if(@professor.role_id == 1)
-         render json: @professor.as_json(except: [:password_digest, :created_at, :updated_at])
+         render json: @professor.as_json(except: [:password_digest, :updated_at, :role_id, :career_id], include: { career: {only: [:name]}, role: {only: [:name]}})
      else
          render json: {"Message":"Usuario no es profesor"}
+     end
+  end
+
+  # POST /professorsname
+  def showbyname
+    @professor = User.where("name like ? AND role_id=1) OR (last_name like ? AND role_id=1", params[:name], params[:last_name])
+
+     if @professor.empty?
+        render json: {"Message":"No existe el profesor"}
+     else
+        render json: @professor.as_json(only: [:id, :name, :last_name]) 
      end
   end
     
@@ -55,6 +66,6 @@ class ProfessorsController < ApplicationController
   private
     # Only allow a trusted parameter "white list" through.
     def professor_params
-      params.require(:user).permit(:name, :last_name, :email, :password_digest, :role_id, :career_id)
+      params.require(:user).permit(:name, :last_name, :email, :password, :password_confirmation, :role_id, :career_id)
     end
 end

@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :update, :destroy]
+  before_action :set_user, only: [:show, :subjects, :articles, :update, :destroy]
 
   # GET /users
   def index
@@ -10,7 +10,16 @@ class UsersController < ApplicationController
 
   # GET /users/1
   def show
-    render json: @user.as_json(except: [:password_digest, :updated_at, :role_id, :career_id], include: { career: {only: [:name]}, role: {only: [:name]}})
+    render json: @user.as_json(except: [:password_digest, :updated_at, :role_id, :career_id], include: { career: {only: [:name]}, role: {only: [:name]}, subjects: {only: [:name]}})
+  end
+
+  # GET /subjectsp
+  def subjects
+    render json: @user.as_json(only: [:id, :name, :last_name, :email], include: { subjects: {only: [:id, :name]}})
+  end
+
+  def articles
+    render json: @user.as_json(only: [:id, :name, :last_name, :email], include: { articles: {except: [:updated_at, :user_id]}})
   end
 
   # POST /users

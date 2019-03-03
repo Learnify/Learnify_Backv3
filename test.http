@@ -1,3 +1,4 @@
+# TOKEN DE ADMIN PARA REGISTRO DE NUEVOS USUARIOS
 # POST http://localhost:3000/authenticate HTTP/1.1
 # content-type: application/json
 
@@ -6,6 +7,7 @@
 #     "password":"123456789"
 # }
 
+# REGISTRO DE USUARIOS
 # POST http://localhost:3000/users HTTP/1.1
 # Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTEyNjY3MTF9.S7FDBJzR2l04zuHRi4a7WA70DWtjKUL43qnuA3Dk66o
 # content-type: application/json
@@ -22,11 +24,50 @@
 #    }
 # }
 
-# YA ESTÁ EN LAS SEMILLAS REGISTRADO
+# INICIO DE SESIÓN
 # POST http://localhost:3000/authenticate HTTP/1.1
 # content-type: application/json
 
 # {
 #     "email":"iycastellanosm@unal.edu.co",
 #     "password":"123456789"
+# }
+
+# BUSQUEDA DE PROFESORES POR NOMBRE O APELLIDO
+
+# /// VERSIÓN 1
+# POST http://localhost:3000/professorsname HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTE3MjQwNDN9.CFWckd2nqmgO-t8Q_K2M2dsmIZgt-yi4hZ_dKT7dHno
+# content-type: application/json
+
+# { 
+#     "last_name":"%Martínez%"
+# }
+
+# /// VERSIÓN 2
+# POST http://localhost:3000/professorsname HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTE3MjQwNDN9.CFWckd2nqmgO-t8Q_K2M2dsmIZgt-yi4hZ_dKT7dHno
+# content-type: application/json
+
+# { 
+#     "name":"%Iván%"
+# }
+
+# /// VERSIÓN 3
+# POST http://localhost:3000/professorsname HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTE3MjQwNDN9.CFWckd2nqmgO-t8Q_K2M2dsmIZgt-yi4hZ_dKT7dHno
+# content-type: application/json
+
+# { 
+#     "name":"%Yesid%",
+#     "last_name":"%Castellanos%"
+# }
+
+# # BUSQUEDA DE MATERIAS POR NOMBRE
+# POST http://localhost:3000/subjectsname HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTE3MjQwNDN9.CFWckd2nqmgO-t8Q_K2M2dsmIZgt-yi4hZ_dKT7dHno
+# content-type: application/json
+
+# { 
+#     "name":"%Ruby%"
 # }

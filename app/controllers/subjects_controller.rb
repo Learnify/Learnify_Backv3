@@ -1,5 +1,5 @@
 class SubjectsController < ApplicationController
-  before_action :set_subject, only: [:show, :update, :destroy]
+  before_action :set_subject, only: [:show, :showbyname, :update, :destroy]
 
     # GET /subjects
   def index
@@ -11,6 +11,17 @@ class SubjectsController < ApplicationController
   # GET /subjects/1
   def show
     render json: @subject
+  end
+
+  # POST /subjectsname
+  def showbyname
+    @subjects = Subject.where("name like ?", params[:name])
+
+     if @subjects.empty?
+        render json: {"Message":"No existe el profesor"}
+     else
+        render json: @subjects.as_json(only: [:id, :name], include: { user: {only: [:id, :name]}}) 
+     end
   end
 
   # POST /subjects
@@ -46,6 +57,6 @@ class SubjectsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def subject_params
-      params.require(:subject).permit(:name, :summary)
+      params.require(:subject).permit(:name, :summary, :user_id)
     end
 end
