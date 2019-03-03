@@ -1,5 +1,5 @@
-# GET http://localhost:3000/subjects HTTP/1.1
-# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NTEyNjkyNTV9.Z9GpHUoncL2Fdyd3Q3PJA1Dc82w7nnepyypOB1K7rv0
+# GET http://localhost:3000/users HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTE3MTIxOTN9.jU36OcO5UG0x_cqbbRwolNgbvNPPjPDjcHenKwTya1Q
 
 # LISTAR TODOS LOS CURSOS DISPONIBLES EN LEARNIFY
 # http://localhost:3000/subjects => List all subjects

@@ -5,12 +5,12 @@ class UsersController < ApplicationController
   def index
     @users = User.all
 
-    render json: @users.as_json(except: [:password_digest, :created_at, :updated_at])
+    render json: @users.as_json(except: [:password_digest, :updated_at, :role_id, :career_id], include: { career: {only: [:name]}, role: {only: [:name]}})
   end
 
   # GET /users/1
   def show
-    render json: @user.as_json(except: [:password_digest, :created_at, :updated_at])
+    render json: @user.as_json(except: [:password_digest, :updated_at, :role_id, :career_id], include: { career: {only: [:name]}, role: {only: [:name]}})
   end
 
   # POST /users

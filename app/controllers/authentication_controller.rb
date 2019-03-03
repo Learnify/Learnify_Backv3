@@ -6,7 +6,7 @@ class AuthenticationController < ApplicationController
     user = User.find_by_email(params[:email])
 
         if command.success?
-            render json: { auth_token: command.result, user: user.as_json(except: [:password_digest, :created_at, :updated_at]) }
+            render json: { auth_token: command.result, user: user.as_json(except: [:password_digest, :updated_at, :role_id, :career_id], include: { career: {only: [:name]}, role: {only: [:name]}}) }
         else
             render json: { error: command.errors }, status: :unauthorized
         end
