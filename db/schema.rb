@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_21_214034) do
+ActiveRecord::Schema.define(version: 2019_03_08_035447) do
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -65,6 +65,8 @@ ActiveRecord::Schema.define(version: 2019_02_21_214034) do
     t.datetime "updated_at", null: false
     t.integer "role_id"
     t.integer "career_id"
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
     t.index ["career_id"], name: "index_users_on_career_id"
     t.index ["role_id"], name: "index_users_on_role_id"
   end
