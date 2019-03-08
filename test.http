@@ -33,6 +33,28 @@
 #     "password":"123456789"
 # }
 
+# CREAR CARRERAS
+# POST http://localhost:3000/careers HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NTIxNjczNjZ9.GT9qvQvbytVOzUIVXJYd0B-RmNi8U4CjlJOsH9W-HWc
+# content-type: application/json
+
+# { 
+#     "name":"Ciencias de la Computación"
+# }
+
+# CREAR ARTÍCULOS
+# POST http://localhost:3000/articles HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NTIxNjczNjZ9.GT9qvQvbytVOzUIVXJYd0B-RmNi8U4CjlJOsH9W-HWc
+# content-type: application/json
+
+# { 
+#     "title":"Primera generación de Ciencias de la Computación ingresa a la U.N.",
+#     "body":"El programa tendrá como base una sólida formación en la investigación, lo que le permitirá al estudiante ser un desarrollador de nueva tecnología, más que una adaptador, explicó el vicedecano académico de la Facultad de Ciencias, Giovanny Garavito Cárdenas.",
+#     "visits_count": 0,
+#     "url":"http://agenciadenoticias.unal.edu.co/detalle/article/primera-generacion-de-ciencias-de-la-computacion-ingresa-a-la-un.html",
+#     "user_id": 2
+# }
+
 # BUSQUEDA DE PROFESORES POR NOMBRE O APELLIDO
 
 # /// VERSIÓN 1

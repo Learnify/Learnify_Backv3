@@ -17908,3 +17908,91 @@ Processing by UsersController#articles as HTML
 Completed 200 OK in 111ms (Views: 0.8ms | ActiveRecord: 5.2ms)
 
 
+  [1m[36mUser Load (25.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started POST "/authenticate" for 127.0.0.1 at 2019-03-08 16:36:02 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "authentication"=>{"email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "iycastellanosm@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "iycastellanosm@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:20
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "iycastellanosm@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6
+  [1m[36mCareer Load (0.6ms)[0m  [1m[34mSELECT  "careers".* FROM "careers" WHERE "careers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:9
+  [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:9
+Completed 200 OK in 1378ms (Views: 0.9ms | ActiveRecord: 9.8ms)
+
+
+Started POST "/careers" for 127.0.0.1 at 2019-03-08 16:36:42 -0500
+Processing by CareersController#create as HTML
+  Parameters: {"name"=>"Ciencias de la Computación", "career"=>{"name"=>"Ciencias de la Computación"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/careers_controller.rb:20
+  [1m[36mCareer Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "careers" WHERE "careers"."name" = ? LIMIT ?[0m  [["name", "Ciencias de la Computación"], ["LIMIT", 1]]
+  ↳ app/controllers/careers_controller.rb:20
+  [1m[36mCareer Create (100.8ms)[0m  [1m[32mINSERT INTO "careers" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ciencias de la Computación"], ["created_at", "2019-03-08 21:36:42.790186"], ["updated_at", "2019-03-08 21:36:42.790186"]]
+  ↳ app/controllers/careers_controller.rb:20
+  [1m[35m (159.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/careers_controller.rb:20
+Completed 201 Created in 320ms (Views: 2.5ms | ActiveRecord: 261.6ms)
+
+
+Started POST "/authenticate" for 127.0.0.1 at 2019-03-08 16:41:37 -0500
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]", "authentication"=>{"email"=>"iycastellanosm@unal.edu.co", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "iycastellanosm@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "iycastellanosm@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "iycastellanosm@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6
+  [1m[36mCareer Load (0.3ms)[0m  [1m[34mSELECT  "careers".* FROM "careers" WHERE "careers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:9
+  [1m[36mRole Load (0.2ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:9
+Completed 200 OK in 281ms (Views: 0.6ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/articles" for 127.0.0.1 at 2019-03-08 16:46:37 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"title"=>"Primera generación de Ciencias de la Computación ingresa a la U.N.", "body"=>"El programa tendrá como base una sólida formación en la investigación, lo que le permitirá al estudiante ser un desarrollador de nueva tecnología, más que una adaptador, explicó el vicedecano académico de la Facultad de Ciencias, Giovanny Garavito Cárdenas.", "visits_count"=>0, "url"=>"http://agenciadenoticias.unal.edu.co/detalle/article/primera-generacion-de-ciencias-de-la-computacion-ingresa-a-la-un.html", "user_id"=>2, "article"=>{"title"=>"Primera generación de Ciencias de la Computación ingresa a la U.N.", "body"=>"El programa tendrá como base una sólida formación en la investigación, lo que le permitirá al estudiante ser un desarrollador de nueva tecnología, más que una adaptador, explicó el vicedecano académico de la Facultad de Ciencias, Giovanny Garavito Cárdenas.", "visits_count"=>0, "url"=>"http://agenciadenoticias.unal.edu.co/detalle/article/primera-generacion-de-ciencias-de-la-computacion-ingresa-a-la-un.html", "user_id"=>2}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[36mArticle Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "articles" WHERE "articles"."title" = ? LIMIT ?[0m  [["title", "Primera generación de Ciencias de la Computación ingresa a la U.N."], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[36mArticle Create (3.6ms)[0m  [1m[32mINSERT INTO "articles" ("title", "body", "visits_count", "url", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "Primera generación de Ciencias de la Computación ingresa a la U.N."], ["body", "El programa tendrá como base una sólida formación en la investigación, lo que le permitirá al estudiante ser un desarrollador de nueva tecnología, más que una adaptador, explicó el vicedecano académico de la Facultad de Ciencias, Giovanny Garavito Cárdenas."], ["visits_count", 0], ["url", "http://agenciadenoticias.unal.edu.co/detalle/article/primera-generacion-de-ciencias-de-la-computacion-ingresa-a-la-un.html"], ["created_at", "2019-03-08 21:46:37.854040"], ["updated_at", "2019-03-08 21:46:37.854040"], ["user_id", 2]]
+  ↳ app/controllers/articles_controller.rb:21
+  [1m[35m (252.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:21
+Completed 201 Created in 338ms (Views: 2.2ms | ActiveRecord: 261.0ms)
+
+
+Started GET "/articlesp/2" for 127.0.0.1 at 2019-03-08 16:48:21 -0500
+Processing by UsersController#articles as HTML
+  Parameters: {"id"=>"2"}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 401 Unauthorized in 4ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/articlesp/2" for 127.0.0.1 at 2019-03-08 16:48:50 -0500
+Processing by UsersController#articles as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/commands/authorize_api_request.rb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:53
+  [1m[36mArticle Load (0.7ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:22
+Completed 200 OK in 260ms (Views: 1.2ms | ActiveRecord: 1.3ms)
+
+
