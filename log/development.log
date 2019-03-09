@@ -20348,3 +20348,133 @@ FOREIGN KEY ("chat_room_id")
   ↳ bin/rails:9
   [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:9
+Started POST "/passwords/forgot" for 127.0.0.1 at 2019-03-09 16:21:03 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/julian/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PasswordsController#forgot as */*
+  Parameters: {"email"=>"jucrodriguezpu@unal.edu.co", "password"=>{"email"=>"jucrodriguezpu@unal.edu.co"}}
+  [1m[36mUser Load (26.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/controllers/passwords_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:23
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mRole Load (48.7ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mCareer Load (12.1ms)[0m  [1m[34mSELECT  "careers".* FROM "careers" WHERE "careers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Update (58.5ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "d9ccfa26dc53672c20b5"], ["reset_password_sent_at", "2019-03-09 21:21:11.718948"], ["updated_at", "2019-03-09 21:21:12.751239"], ["id", 4]]
+  ↳ app/models/user.rb:23
+  [1m[35m (680.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:23
+Completed 500 Internal Server Error in 3570ms (ActiveRecord: 831.8ms)
+
+
+  
+NameError (uninitialized constant PasswordsController::ApplicationMailer):
+  
+app/controllers/passwords_controller.rb:13:in `forgot'
+Started POST "/passwords/forgot" for 127.0.0.1 at 2019-03-09 16:48:31 -0500
+Processing by PasswordsController#forgot as */*
+  Parameters: {"email"=>"jucrodriguezpu@unal.edu.co", "password"=>{"email"=>"jucrodriguezpu@unal.edu.co"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/controllers/passwords_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:23
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mCareer Load (0.4ms)[0m  [1m[34mSELECT  "careers".* FROM "careers" WHERE "careers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Update (95.2ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "2a4392b4009c11ab7957"], ["reset_password_sent_at", "2019-03-09 21:48:52.376620"], ["updated_at", "2019-03-09 21:48:52.715619"], ["id", 4]]
+  ↳ app/models/user.rb:23
+  [1m[35m (921.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:23
+Completed 500 Internal Server Error in 3459ms (ActiveRecord: 1084.0ms)
+
+
+  
+NameError (uninitialized constant PasswordsController::ApplicationMailer):
+  
+app/controllers/passwords_controller.rb:13:in `forgot'
+Started POST "/passwords/forgot" for 127.0.0.1 at 2019-03-09 16:49:17 -0500
+Processing by PasswordsController#forgot as */*
+  Parameters: {"email"=>"jucrodriguezpu@unal.edu.co", "password"=>{"email"=>"jucrodriguezpu@unal.edu.co"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/controllers/passwords_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:23
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mCareer Load (0.4ms)[0m  [1m[34mSELECT  "careers".* FROM "careers" WHERE "careers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Update (7.8ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "9f9cc4784389475eaef3"], ["reset_password_sent_at", "2019-03-09 21:49:17.231171"], ["updated_at", "2019-03-09 21:49:17.260286"], ["id", 4]]
+  ↳ app/models/user.rb:23
+  [1m[35m (524.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:23
+Completed 500 Internal Server Error in 576ms (ActiveRecord: 533.8ms)
+
+
+  
+NameError (uninitialized constant PasswordsController::ApplicationMailer):
+  
+app/controllers/passwords_controller.rb:13:in `forgot'
+Started POST "/passwords/forgot" for 127.0.0.1 at 2019-03-09 16:52:02 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/julian/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by PasswordsController#forgot as */*
+  Parameters: {"email"=>"jucrodriguezpu@unal.edu.co", "password"=>{"email"=>"jucrodriguezpu@unal.edu.co"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/controllers/passwords_controller.rb:9
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:23
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mCareer Load (0.3ms)[0m  [1m[34mSELECT  "careers".* FROM "careers" WHERE "careers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Update (53.4ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "93ab07731cb1b8eb94ef"], ["reset_password_sent_at", "2019-03-09 21:52:07.279153"], ["updated_at", "2019-03-09 21:52:07.583590"], ["id", 4]]
+  ↳ app/models/user.rb:23
+  [1m[35m (435.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:23
+  Rendering application_mailer/sample_email.html.erb within layouts/mailer
+  Rendered application_mailer/sample_email.html.erb within layouts/mailer (2.9ms)
+ApplicationMailer#sample_email: processed outbound mail in 881.1ms
+Sent mail to jucrodriguezpu@unal.edu.co (352.1ms)
+Date: Sat, 09 Mar 2019 16:52:12 -0500
+From: from@example.com
+To: jucrodriguezpu@unal.edu.co
+Message-ID: <5c84358cc5922_42a62b13806a0374307a@julian-Notebook-PC.mail>
+Subject: =?UTF-8?Q?Solicitud_de_cambio_de_contrase=C3=B1a?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <ht>Hola jucrodriguezpu@unal.edu.co</ht>  =0D
+<p>  =0D
+    Te enviamos este correo para que realices el cambio de tu contrase=C3=
+=B1a entrando a la siguiente direcci=C3=B3n <a href=3D"localhost:3000/pas=
+swords/reset/93ab07731cb1b8eb94ef">Recuperar contrase=C3=B1a</a>=0D
+</p>  =0D
+  </body>=0D
+</html>=0D
+
+Completed 200 OK in 6085ms (Views: 0.6ms | ActiveRecord: 496.3ms)
+
+
