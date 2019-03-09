@@ -3,16 +3,16 @@
 # Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTE3MTIxOTN9.jU36OcO5UG0x_cqbbRwolNgbvNPPjPDjcHenKwTya1Q
 
 # LISTAR TODOS LOS CURSOS DISPONIBLES EN LEARNIFY
-# http://localhost:3000/subjects => List all subjects
+# GET http://localhost:3000/subjects
 
-# LISTAR INFO DE UN CURSO EN ESPECIFICO EN LEARNIFY
-# http://localhost:3000/subjects/1 => List subject with id 1
+# LISTAR INFO DE UN CURSO EN ESPECIFICO EN LEARNIFY => List subject with id 1
+# GET http://localhost:3000/subjects/1 
 
 # LISTAR PROFESORES DISPONIBLES EN LEARNIFY
-# http://localhost:3000/professors
+# GET http://localhost:3000/professors
 
 # LISTAR UN PROFESOR ESPECÍFICO EN LEARNIFY
-# http://localhost:3000/professors/2
+# GET http://localhost:3000/professors/2
 
 # http://localhost:3000/users  => List all users
 # http://localhost:3000/users/1 => List user with id 1
@@ -21,8 +21,8 @@
 
 # LISTAR LAS MATERIAS POR UN PROFESOR ESPECIFICO EN LEARNIFY
 # GET http://localhost:3000/subjectsp/2 HTTP/1.1
-# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTE3MTk5NzJ9.-19hqF5cs_EY4grLudQZsxX4IDEiXkCnKLpNfR2rdVQ
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NTIxNjczNjZ9.GT9qvQvbytVOzUIVXJYd0B-RmNi8U4CjlJOsH9W-HWc
 
 # LISTAR LOS ARTÍCULOS POR UN PROFESOR ESPECIFICO EN LEARNIFY
 # GET http://localhost:3000/articlesp/2 HTTP/1.1
-# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTE3MTk5NzJ9.-19hqF5cs_EY4grLudQZsxX4IDEiXkCnKLpNfR2rdVQ
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NTIxNjczNjZ9.GT9qvQvbytVOzUIVXJYd0B-RmNi8U4CjlJOsH9W-HWc

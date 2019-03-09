@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :subjects, :articles, :update, :destroy]
+  skip_before_action :authenticate_request, only: [:subjects, :articles]
 
   # GET /users
   def index
@@ -18,6 +19,7 @@ class UsersController < ApplicationController
     render json: @user.as_json(only: [:id, :name, :last_name, :email], include: { subjects: {only: [:id, :name]}})
   end
 
+  # GET /articlesp
   def articles
     render json: @user.as_json(only: [:id, :name, :last_name, :email], include: { articles: {except: [:updated_at, :user_id]}})
   end

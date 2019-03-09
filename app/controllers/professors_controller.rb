@@ -1,4 +1,7 @@
 class ProfessorsController < ApplicationController
+  before_action :set_professor, only: [:show, :showbyname, :update, :destroy]
+  skip_before_action :authenticate_request, only: [:index, :show, :showbyname]
+
   def index
       @professors = User.where(role_id: 1)
       render json: @professors.as_json(except: [:password_digest, :updated_at, :role_id, :career_id], include: { career: {only: [:name]}, role: {only: [:name]}})
@@ -64,6 +67,11 @@ class ProfessorsController < ApplicationController
   end
 
   private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_professor
+      @professor = User.find(params[:id])
+    end
+
     # Only allow a trusted parameter "white list" through.
     def professor_params
       params.require(:user).permit(:name, :last_name, :email, :password, :password_confirmation, :role_id, :career_id)

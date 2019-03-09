@@ -1,5 +1,6 @@
 class RolesController < ApplicationController
   before_action :set_role, only: [:show, :update, :destroy]
+  skip_before_action :authenticate_request, only: [:show, :index]
   
   def index
       @roles = Role.all

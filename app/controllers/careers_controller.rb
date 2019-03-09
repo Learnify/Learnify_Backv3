@@ -1,5 +1,6 @@
 class CareersController < ApplicationController
   before_action :set_career, only: [:show, :update, :destroy]
+  skip_before_action :authenticate_request, only: [:show, :index]
   
   # GET /careers
   def index
@@ -15,7 +16,7 @@ class CareersController < ApplicationController
 
   # POST /careers
   def create
-    @career = career.new(career_params)
+    @career = Career.new(career_params)
 
     if @career.save
       render json: @career, status: :created, location: @career
