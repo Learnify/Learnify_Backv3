@@ -7,6 +7,7 @@ class User < ApplicationRecord
     has_many :articles
     has_many :subjects
     has_many :chat_rooms, dependent: :destroy
+    has_many :messages, dependent: :destroy
     
     def nombre 
         email.split('@')[0].upcase    
