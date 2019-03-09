@@ -7,7 +7,9 @@ class ChatRoomsController < ApplicationController
   def show
     @chat_room = ChatRoom.includes(:messages).find_by(id: params[:id])
     render json: @chat_room
+    
   end
+    
   def create
     @chat_room = current_user.chat_rooms.build(chat_room_params)
     if @chat_room.save
