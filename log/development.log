@@ -11301,3 +11301,44 @@ Processing by UsersController#create as HTML
 Completed 201 Created in 960ms (Views: 0.5ms | ActiveRecord: 884.8ms)
 
 
+Started GET "/rails/mailers/user_mailer/welcome_mail_preview" for 127.0.0.1 at 2019-03-09 05:48:42 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/jann/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (9.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/user_mailer_preview.rb:4
+UserMailer#welcome_email: processed outbound mail in 0.2ms
+Completed 500 Internal Server Error in 140ms (ActiveRecord: 10.5ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/mailers/user_mailer.rb:4:in `welcome_email'
+Started GET "/rails/mailers/user_mailer/welcome_mail_preview" for 127.0.0.1 at 2019-03-09 05:49:43 -0500
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"path"=>"user_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/user_mailer_preview.rb:4
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.3ms)
+UserMailer#welcome_email: processed outbound mail in 1664.6ms
+  Rendering /home/jann/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.2/lib/rails/templates/rails/mailers/email.html.erb
+  Rendered /home/jann/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/railties-5.2.2/lib/rails/templates/rails/mailers/email.html.erb (47.6ms)
+Completed 200 OK in 2266ms (Views: 105.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/rails/mailers/user_mailer/welcome_mail_preview?part=text%2Fhtml" for 127.0.0.1 at 2019-03-09 05:49:45 -0500
+Processing by Rails::MailersController#preview as HTML
+  Parameters: {"part"=>"text/html", "path"=>"user_mailer/welcome_mail_preview"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ test/mailers/previews/user_mailer_preview.rb:4
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (0.4ms)
+UserMailer#welcome_email: processed outbound mail in 12.2ms
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 479ms (Views: 465.1ms | ActiveRecord: 0.1ms)
+
+
