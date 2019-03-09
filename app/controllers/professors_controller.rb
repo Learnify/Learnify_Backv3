@@ -1,5 +1,5 @@
 class ProfessorsController < ApplicationController
-  before_action :set_professor, only: [:show, :showbyname, :update, :destroy]
+  before_action :set_professor, only: [:show, :update, :destroy]
   skip_before_action :authenticate_request, only: [:index, :show, :showbyname]
 
   def index

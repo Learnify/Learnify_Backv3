@@ -1,5 +1,5 @@
 class SubjectsController < ApplicationController
-  before_action :set_subject, only: [:show, :showbyname, :update, :destroy]
+  before_action :set_subject, only: [:show, :update, :destroy]
   skip_before_action :authenticate_request, only: [:show, :index, :showbyname]
 
     # GET /subjects
