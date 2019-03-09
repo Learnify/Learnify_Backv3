@@ -3,7 +3,7 @@
 # Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTE3MTIxOTN9.jU36OcO5UG0x_cqbbRwolNgbvNPPjPDjcHenKwTya1Q
 
 # LISTAR TODOS LOS CURSOS DISPONIBLES EN LEARNIFY
-# GET http://localhost:3000/subjects
+# GET http://localhost:3000/articles/6
 
 # LISTAR INFO DE UN CURSO EN ESPECIFICO EN LEARNIFY => List subject with id 1
 # GET http://localhost:3000/subjects/1 
