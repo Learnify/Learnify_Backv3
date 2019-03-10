@@ -20478,3 +20478,45 @@ swords/reset/93ab07731cb1b8eb94ef">Recuperar contrase=C3=B1a</a>=0D
 Completed 200 OK in 6085ms (Views: 0.6ms | ActiveRecord: 496.3ms)
 
 
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreateDocuments (20190310194554)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/migrate/20190310194554_create_documents.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "documents" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, CONSTRAINT "fk_rails_2be0318c46"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  ↳ db/migrate/20190310194554_create_documents.rb:3
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE  INDEX "index_documents_on_user_id" ON "documents" ("user_id")[0m
+  ↳ db/migrate/20190310194554_create_documents.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190310194554"]]
+  ↳ bin/rails:9
+  [1m[35m (141.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to AddAttachmentFileToDocuments (20190310194625)
+  [1m[35m (0.8ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (4.0ms)[0m  [1m[35mALTER TABLE "documents" ADD "file_file_name" varchar[0m
+  ↳ db/migrate/20190310194625_add_attachment_file_to_documents.rb:4
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "documents" ADD "file_content_type" varchar[0m
+  ↳ db/migrate/20190310194625_add_attachment_file_to_documents.rb:4
+  [1m[35m (3.0ms)[0m  [1m[35mALTER TABLE "documents" ADD "file_file_size" integer[0m
+  ↳ db/migrate/20190310194625_add_attachment_file_to_documents.rb:4
+  [1m[35m (1.6ms)[0m  [1m[35mALTER TABLE "documents" ADD "file_updated_at" datetime[0m
+  ↳ db/migrate/20190310194625_add_attachment_file_to_documents.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (3.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20190310194625"]]
+  ↳ bin/rails:9
+  [1m[35m (70.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
