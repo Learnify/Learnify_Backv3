@@ -95,21 +95,24 @@
 # }
 
 
-### RECUPERACION DE CONTRASEÑA
-# # Envio de correo con token
+# ### RECUPERACION DE CONTRASEÑA
+# # # Envio de correo con token
 # POST http://localhost:3000/passwords/forgot
 # content-type: application/json
-#{
-#  "email":"jucrodriguezpu@unal.edu.co"
-#}
+
+# {
+#     "email":"jucrodriguezpu@unal.edu.co"
+# }
 
 # # Ingresar para modificar contraseña
 # POST http://localhost:3000/passwords/reset
 # content-type: application/json
+
 # {
-#  "email":"jucrodriguezpu@unal.edu.co",
-#  "token": "2184ac4bb718ed05acd2"
-#}
+#     "email":"jucrodriguezpu@unal.edu.co",
+#     "password": "otraContraseña",
+#     "token": "2184ac4bb718ed05acd2"
+# }
 
 # # Enviar datos de nueva contraseña
 # PUT http://localhost:3000/passwords/update
