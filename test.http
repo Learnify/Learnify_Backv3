@@ -1,22 +1,22 @@
-# TOKEN DE ADMIN PARA REGISTRO DE NUEVOS USUARIOS
+# # TOKEN DE ADMIN PARA REGISTRO DE NUEVOS USUARIOS
 # POST http://localhost:3000/authenticate HTTP/1.1
 # content-type: application/json
-#
+
 # {
-#  "email":"admin@example.com.co",
-#   "password":"123456789"
-#}
+#     "email":"admin@example.com.co",
+#     "password":"123456789"
+# }
 
 # REGISTRO DE USUARIOS
 # POST http://localhost:3000/users HTTP/1.1
-# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTEyNjY3MTF9.S7FDBJzR2l04zuHRi4a7WA70DWtjKUL43qnuA3Dk66o
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTIzMzcyNjB9.rXlOLsXF-ipVNJprl75QqzIzdCl9rVFPVxGO0ZrZEXo
 # content-type: application/json
 
 # { "user": 
 #    {
-#       "name":"Jairo Hernán",
-#       "last_name":"Aponte Melo",
-#       "email":"jhapontem@unal.edu.co",
+#       "name":"Juan",
+#       "last_name":"Rodríguez",
+#       "email":"juancaropu123@gmail.com",
 #       "password":"123456789",
 #       "password_confirmation":"123456789",
 #       "role_id":"1",
@@ -28,12 +28,9 @@
 # POST http://localhost:3000/authenticate HTTP/1.1
 # content-type: application/json
 
-#POST http://localhost:3000/authenticate HTTP/1.1
-#content-type: application/json
-#
 # {
-#     "email":"iycastellanosm@unal.edu.co",
-#     "password":"123456789"
+#     "email":"jucrodriguezpu@unal.edu.co",
+#     "password":"123123123"
 # }
 
 # CREAR CARRERAS
@@ -104,7 +101,7 @@
 # content-type: application/json
 
 # {
-#     "email":"jucrodriguezpu@unal.edu.co"
+#     "email":"juancaropu123@gmail.com"
 # }
 
 # # Ingresar para modificar contraseña
@@ -112,9 +109,9 @@
 # content-type: application/json
 
 # {
-#     "email":"jucrodriguezpu@unal.edu.co",
-#     "password": "otraContraseña",
-#     "token": "2184ac4bb718ed05acd2"
+#     "email":"juancaropu123@gmail.com",
+#     "password": "987654321",
+#     "token": "f87efac0be5a44987490"
 # }
 
 # # Enviar datos de nueva contraseña
