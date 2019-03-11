@@ -113,11 +113,3 @@
 #     "password": "987654321",
 #     "token": "f87efac0be5a44987490"
 # }
-
-# # Enviar datos de nueva contraseña
-# PUT http://localhost:3000/passwords/update
-# content-type: application/json
-# {
-#	"password": "otraContraseña",
-#	"token": "2184ac4bb718ed05acd2"
-# }

@@ -10,7 +10,7 @@ class PasswordsController < ApplicationController
 
         if user.present?
           user.generate_password_token!
-          ApplicationMailer.sample_email(user, 'localhost:3000').deliver
+          ApplicationMailer.sample_email(user, 'localhost:3001').deliver
           render json: {status: 'ok'}, status: :ok
         else
           render json: {error: ['Email address not found. Please check and try again.']}, status: :not_found
