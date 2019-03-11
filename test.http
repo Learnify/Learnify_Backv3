@@ -9,14 +9,13 @@
 
 # REGISTRO DE USUARIOS
 # POST http://localhost:3000/users HTTP/1.1
-# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTIzMzcyNjB9.rXlOLsXF-ipVNJprl75QqzIzdCl9rVFPVxGO0ZrZEXo
 # content-type: application/json
 
 # { "user": 
 #    {
-#       "name":"Ashley",
-#       "last_name":"Pinto",
-#       "email":"ashleypinto702@gmail.com",
+#       "name":"Juan",
+#       "last_name":"Rodriguez",
+#       "email":"juancaropu123@gmail.com",
 #       "password":"123456789",
 #       "password_confirmation":"123456789",
 #       "role_id":"1",
