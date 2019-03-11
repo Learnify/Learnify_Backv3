@@ -101,7 +101,7 @@
 # content-type: application/json
 
 # {
-#     "email":"juancaropu123@gmail.com"
+#     "email":"jucrodriguezpu@unal.edu.co"
 # }
 
 # # Ingresar para modificar contraseña
@@ -109,7 +109,7 @@
 # content-type: application/json
 
 # {
-#     "email":"juancaropu123@gmail.com",
+#     "email":"jucrodriguezpu@unal.edu.co",
 #     "password": "987654321",
-#     "token": "f87efac0be5a44987490"
+#     "token": "70e6c96b71a77d9c3f2d"
 # }

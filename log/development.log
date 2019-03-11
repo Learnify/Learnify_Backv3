@@ -22733,3 +22733,130 @@ UserMailer#welcome_email: processed outbound mail in 7.9ms
 Completed 200 OK in 12ms (Views: 0.8ms | ActiveRecord: 0.7ms)
 
 
+Started POST "/authenticate" for 127.0.0.1 at 2019-03-11 00:39:43 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/juanca/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2/lib/active_record/log_subscriber.rb:98
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"jucrodriguezpu@unal.edu.co", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jucrodriguezpu@unal.edu.co", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6
+  [1m[36mCareer Load (0.3ms)[0m  [1m[34mSELECT  "careers".* FROM "careers" WHERE "careers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:9
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:9
+Completed 200 OK in 426ms (Views: 1.6ms | ActiveRecord: 5.3ms)
+
+
+Started POST "/passwords/forgot" for 127.0.0.1 at 2019-03-11 00:40:17 -0500
+Processing by PasswordsController#forgot as HTML
+  Parameters: {"email"=>"jucrodriguezpu@unal.edu.co", "password"=>{"email"=>"jucrodriguezpu@unal.edu.co"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/controllers/passwords_controller.rb:9
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:23
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mCareer Load (0.5ms)[0m  [1m[34mSELECT  "careers".* FROM "careers" WHERE "careers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:23
+  [1m[36mUser Update (3.7ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "70e6c96b71a77d9c3f2d"], ["reset_password_sent_at", "2019-03-11 05:40:17.981534"], ["updated_at", "2019-03-11 05:40:18.019261"], ["id", 4]]
+  ↳ app/models/user.rb:23
+  [1m[35m (151.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:23
+  Rendering application_mailer/sample_email.html.erb within layouts/mailer
+  Rendered application_mailer/sample_email.html.erb within layouts/mailer (26.7ms)
+ApplicationMailer#sample_email: processed outbound mail in 1919.1ms
+Sent mail to jucrodriguezpu@unal.edu.co (2588.2ms)
+Date: Mon, 11 Mar 2019 00:40:20 -0500
+From: learnifyingesoft@gmail.com
+To: jucrodriguezpu@unal.edu.co
+Message-ID: <5c85f4c44a273_13b03ffff26983e0332bf@LAPTOPHP-JUANCA.mail>
+Subject: =?UTF-8?Q?Solicitud_de_cambio_de_contrase=C3=B1a?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0D
+<html>=0D
+  <head>=0D
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8" />=0D
+    <style>=0D
+      /* Email styles need to be inline */=0D
+    </style>=0D
+  </head>=0D
+=0D
+  <body>=0D
+    <ht>Hola jucrodriguezpu@unal.edu.co</ht>  =0D
+<p>  =0D
+    Te enviamos este correo para que realices el cambio de tu contrase=C3=
+=B1a entrando a la siguiente direcci=C3=B3n. <a href=3D"http://localhost:=
+3001/ChangePassword/jucrodriguezpu@unal.edu.co/70e6c96b71a77d9c3f2d">Recu=
+perar contrase=C3=B1a</a>=0D
+</p> =0D
+  </body>=0D
+</html>=0D
+
+Completed 200 OK in 4877ms (Views: 0.5ms | ActiveRecord: 157.2ms)
+
+
+Started POST "/passwords/reset" for 127.0.0.1 at 2019-03-11 00:41:29 -0500
+Processing by PasswordsController#reset as HTML
+  Parameters: {"email"=>"jucrodriguezpu@unal.edu.co", "password"=>"[FILTERED]", "token"=>"70e6c96b71a77d9c3f2d"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? LIMIT ?[0m  [["reset_password_token", "70e6c96b71a77d9c3f2d"], ["LIMIT", 1]]
+  ↳ app/controllers/passwords_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/models/user.rb:33
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? AND "users"."id" != ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mCareer Load (0.2ms)[0m  [1m[34mSELECT  "careers".* FROM "careers" WHERE "careers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/models/user.rb:33
+  [1m[36mUser Update (2.2ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "password_digest" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", nil], ["password_digest", "$2a$10$HM9905dTTVO1LttSNrtPS.1AMSkSRAHh7Av0bKU.wyshMZesoltU2"], ["updated_at", "2019-03-11 05:41:29.949466"], ["id", 4]]
+  ↳ app/models/user.rb:33
+  [1m[35m (169.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/models/user.rb:33
+Completed 200 OK in 353ms (Views: 0.5ms | ActiveRecord: 173.4ms)
+
+
+Started POST "/passwords/reset" for 127.0.0.1 at 2019-03-11 00:41:44 -0500
+Processing by PasswordsController#reset as HTML
+  Parameters: {"email"=>"juancaropu123@gmail.com", "password"=>"[FILTERED]", "token"=>"70e6c96b71a77d9c3f2d"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? LIMIT ?[0m  [["reset_password_token", "70e6c96b71a77d9c3f2d"], ["LIMIT", 1]]
+  ↳ app/controllers/passwords_controller.rb:27
+Completed 404 Not Found in 6ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/authenticate" for 127.0.0.1 at 2019-03-11 00:42:07 -0500
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"jucrodriguezpu@unal.edu.co", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jucrodriguezpu@unal.edu.co", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6
+Completed 401 Unauthorized in 139ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/authenticate" for 127.0.0.1 at 2019-03-11 00:42:14 -0500
+Processing by AuthenticationController#authenticate as HTML
+  Parameters: {"email"=>"jucrodriguezpu@unal.edu.co", "password"=>"[FILTERED]", "authentication"=>{"email"=>"jucrodriguezpu@unal.edu.co", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/commands/authenticate_user.rb:20
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "jucrodriguezpu@unal.edu.co"], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:6
+  [1m[36mCareer Load (0.3ms)[0m  [1m[34mSELECT  "careers".* FROM "careers" WHERE "careers"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:9
+  [1m[36mRole Load (0.2ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" WHERE "roles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/authentication_controller.rb:9
+Completed 200 OK in 308ms (Views: 0.5ms | ActiveRecord: 1.0ms)
+
+

@@ -21,13 +21,13 @@ class SubjectsController < ApplicationController
      if @subjects.empty?
         render json: {"Message":"No existe el profesor"}
      else
-        render json: @subjects.as_json(only: [:id, :name], include: { user: {only: [:id, :name]}}) 
+        render json: @subjects.as_json(only: [:id, :name], include: { users: {only: [:id, :name]}}) 
      end
   end
 
   # POST /subjects
   def create
-    @subject = subject.new(subject_params)
+    @subject = Subject.new(subject_params)
 
     if @subject.save
       render json: @subject, status: :created, location: @subject

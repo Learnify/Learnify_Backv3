@@ -20,7 +20,7 @@ class PasswordsController < ApplicationController
     def reset
         token = params[:token].to_s
 
-        if params[:email].blank?
+        if token.blank?
           return render json: {error: 'Token not present'}
         end
 
@@ -33,7 +33,7 @@ class PasswordsController < ApplicationController
             render json: {error: user.errors.full_messages}, status: :unprocessable_entity
           end
         else
-          render json: {error:  ['Link not valid or expired. Try generating a new link.']}, status: :not_found
+          render json: {error:  ['Email or Link not valid or expired. Check user email or Try generating a new link.']}, status: :not_found
         end
     end
     
