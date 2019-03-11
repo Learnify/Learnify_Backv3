@@ -3,12 +3,74 @@
 <html>
   <head>
     <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <style>
+      /*colors: #0B0C10
+                #1F2833
+                #C5C6C7
+                #66FCF1
+                #45A29E
+      */
+      body{
+        background-color: #0B0C10;
+        color:#C5C6C7;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        font-family: 'Raleway', sans-serif;
+      }
+
+      h1{
+        /*background-color:#1F2833;*/
+        margin: 0;
+        padding: 5px;
+        color:#66FCF1;
+        width:100%;
+        text-align: center;
+      }
+      h1 span{
+        text-shadow: 2px 2px #45A29E;
+        font-weight:700;
+      }
+      div{
+        width: 50%;
+        height: 80%;
+        background-color: #1F2833;
+        color: #C5C6C7;
+        text-align: center;
+        font-weight:700;
+        display:flex;
+        flex-wrap: wrap;
+        align-items: center;
+        /*flex-direction:column;*/
+        justify-content: center;
+        border-radius: 4%;
+      }
+      .footer{
+        align-self: flex-end;
+      }
+    </style>
   </head>
   <body>
-    <h1>Welcome to Learnify.com, <%= @user.name %></h1>
-    <p>
-      You have successfully signed up to Learnify<br>
-    </p>
-    <p>Thanks for trusting us, have a great day!</p>
+    <h1>Welcome to <span>Learnify</span>,  <%= @user.name %></h1>
+    <div>
+      <p>
+        You have successfully signed up to Learnify<br>
+      </p>
+      <p>Learnify is the plataform that is going to help you<br> to learn everithing that you want<br>
+        Let's take a look and check all the Tutors <br> that you can meet right now.
+      </p>
+      <p>
+        If you get this email and you don't sign up to our site,<br> you can skip this email, but,<br>
+        we invite you to search our project <br> and know what we do, We promise you that<br>
+        you won't regret it.
+      </p>
+      <p class="footer">Thanks for trusting us, have a great day!</p>
+    </div>
+    
   </body>
 </html>
