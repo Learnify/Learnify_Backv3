@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'learnifyingesoft@gmail.com'
+  default from: 'Equipo de Soporte de Learnify'
   layout 'mailer'
     
   def sample_email(user, base_url)  

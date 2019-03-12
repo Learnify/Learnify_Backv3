@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-    default from: 'learnifyIngesoft@gmail.com'
+    default from: 'Equipo de Soporte de Learnify'
 
     def welcome_email(user)
         @user = user
