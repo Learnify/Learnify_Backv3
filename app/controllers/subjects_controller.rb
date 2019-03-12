@@ -27,12 +27,24 @@ class SubjectsController < ApplicationController
 
   # POST /subjects
   def create
-    @subject = Subject.new(subject_params)
+    @user = User.find(params[:user_id])
+    @subject = Subject.where("name like ?", params[:name]).first
 
-    if @subject.save
-      render json: @subject, status: :created, location: @subject
+    if @subject.present?
+      if @subject.users.include?(@user) 
+        render json: {"Message":"Already exists user in subject"}
+      else
+        @subject.users << @user
+        render json: @subject.as_json(except: [:user_id]), status: :accepted, location: @subject
+      end
     else
-      render json: @subject.errors, status: :unprocessable_entity
+      @subject = Subject.new(subject_params)
+
+      if @subject.save
+        render json: @subject, status: :created, location: @subject
+      else
+        render json: @subject.errors, status: :unprocessable_entity
+      end
     end
   end
 

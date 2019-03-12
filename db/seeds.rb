@@ -22,7 +22,8 @@ User.create!(name: 'Brian Julian' , last_name: 'Moreno' , email: 'bjmorenon@unal
 User.create!(name: 'Juan Camilo' , last_name: 'Rodríguez Puentes' , email: 'jucrodriguezpu@unal.edu.co' , password: '123123123' , password_confirmation: '123123123' , role_id: 2, career_id: 1)
 
 Subject.create!( name:"Programación Ruby", summary:"Ésta es una materia sobre Ruby", user_id: 2)
-Subject.create!( name:"Programación Ruby", summary:"Ésta es una materia sobre Ruby", user_id: 3)
+s = Subject.find_by(name: "Programación Ruby")
+s.users << User.find_by(id: 2)
 Subject.create!( name:"Cáncer", summary:"Ésta es una materia sobre el cáncer y sus efectos", user_id: 3)
 Subject.create!( name:"Urbanística", summary:"Ésta es una materia sobre urbanística", user_id: 2)
 Subject.create( name:"Lectoescritura musical", summary:"Ésta es una materia que desarrolla capacidad auditiva y formación teórica", user_id: 3)

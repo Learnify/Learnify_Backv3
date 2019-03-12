@@ -1,4 +1,5 @@
-# # TOKEN DE ADMIN PARA REGISTRO DE NUEVOS USUARIOS
+# ### ADMIN PARA TRANSACCIONES ESPECIALES
+
 # POST http://localhost:3000/authenticate HTTP/1.1
 # content-type: application/json
 
@@ -7,7 +8,8 @@
 #     "password":"123456789"
 # }
 
-# REGISTRO DE USUARIOS
+# ### REGISTRO DE USUARIOS
+
 # POST http://localhost:3000/users HTTP/1.1
 # content-type: application/json
 
@@ -23,25 +25,52 @@
 #    }
 # }
 
-# INICIO DE SESIÓN
+# ### INICIO DE SESIÓN
+
 # POST http://localhost:3000/authenticate HTTP/1.1
 # content-type: application/json
 
 # {
 #     "email":"jucrodriguezpu@unal.edu.co",
-#     "password":"123123123"
+#     "password":"987654321"
 # }
 
-# CREAR CARRERAS
+# ### CREAR CARRERAS
+
 # POST http://localhost:3000/careers HTTP/1.1
-# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NTIxNjczNjZ9.GT9qvQvbytVOzUIVXJYd0B-RmNi8U4CjlJOsH9W-HWc
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE1NTI0MTE0ODV9.Zkh4GeBThGCBwgl5aoz_gHRYGpzYq0m8MqIPvBDixKs
 # content-type: application/json
 
 # { 
 #     "name":"Ciencias de la Computación"
 # }
 
-# CREAR ARTÍCULOS
+# ### CREAR MATERIAS => Éstas tendrán guardado por defecto el primer profesor que creo la materia, 
+#                       PERO DEBE AÚN ASIGNARLE LA MATERIA
+
+# POST http://localhost:3000/subjects HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE1NTI0MTM3MjB9.8ZedH7y2H6hwyTYPqte8sq8tJh7NbPU_9MfLczFk720
+# content-type: application/json
+
+# { 
+#     "name":"Programación de Computadores C++",
+#     "summary":"Ésta es una materia sobre programación básica de computadores usando el lenguaje C++",
+#     "user_id": 3
+# }
+
+# ### ASIGNAR MATERIAS
+
+# POST http://localhost:3000/subjects HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE1NTI0MTM3MjB9.8ZedH7y2H6hwyTYPqte8sq8tJh7NbPU_9MfLczFk720
+# content-type: application/json
+
+# { 
+#     "name":"%Programación Ruby%",
+#     "user_id": 3
+# }
+
+# ###CREAR ARTÍCULOS
+
 # POST http://localhost:3000/articles HTTP/1.1
 # Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NTIxNjczNjZ9.GT9qvQvbytVOzUIVXJYd0B-RmNi8U4CjlJOsH9W-HWc
 # content-type: application/json
@@ -54,11 +83,10 @@
 #     "user_id": 2
 # }
 
-# BUSQUEDA DE PROFESORES POR NOMBRE O APELLIDO
+# ### BUSQUEDA DE PROFESORES POR NOMBRE O APELLIDO
 
 # /// VERSIÓN 1
 # POST http://localhost:3000/professorsname HTTP/1.1
-# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTE3MjQwNDN9.CFWckd2nqmgO-t8Q_K2M2dsmIZgt-yi4hZ_dKT7dHno
 # content-type: application/json
 
 # { 
@@ -67,7 +95,6 @@
 
 # /// VERSIÓN 2
 # POST http://localhost:3000/professorsname HTTP/1.1
-# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTE3MjQwNDN9.CFWckd2nqmgO-t8Q_K2M2dsmIZgt-yi4hZ_dKT7dHno
 # content-type: application/json
 
 # { 
@@ -76,7 +103,6 @@
 
 # /// VERSIÓN 3
 # POST http://localhost:3000/professorsname HTTP/1.1
-# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTE3MjQwNDN9.CFWckd2nqmgO-t8Q_K2M2dsmIZgt-yi4hZ_dKT7dHno
 # content-type: application/json
 
 # { 
@@ -84,9 +110,9 @@
 #     "last_name":"%Castellanos%"
 # }
 
-# # BUSQUEDA DE MATERIAS POR NOMBRE
+# ### BUSQUEDA DE MATERIAS POR NOMBRE
+
 # POST http://localhost:3000/subjectsname HTTP/1.1
-# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTE3MjQwNDN9.CFWckd2nqmgO-t8Q_K2M2dsmIZgt-yi4hZ_dKT7dHno
 # content-type: application/json
 
 # { 
@@ -95,7 +121,8 @@
 
 
 # ### RECUPERACION DE CONTRASEÑA
-# # # Envio de correo con token
+# ## PASO 1 => Envio de correo con token ( Se construye una URL así http://#{base_url}/ChangePassword/#{@user.email}/#{@user.reset_password_token} )
+
 # POST http://localhost:3000/passwords/forgot
 # content-type: application/json
 
@@ -103,12 +130,13 @@
 #     "email":"jucrodriguezpu@unal.edu.co"
 # }
 
-# # Ingresar para modificar contraseña
+# ## PASO 2 => Ingresar para modificar contraseña
+
 # POST http://localhost:3000/passwords/reset
 # content-type: application/json
 
 # {
 #     "email":"jucrodriguezpu@unal.edu.co",
 #     "password": "987654321",
-#     "token": "70e6c96b71a77d9c3f2d"
+#     "token": "3b7324b7bdec6e91a9c9"
 # }

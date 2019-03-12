@@ -5,8 +5,8 @@
 # LISTAR TODOS LOS CURSOS DISPONIBLES EN LEARNIFY
 # GET http://localhost:3000/articles/6
 
-# LISTAR INFO DE UN CURSO EN ESPECIFICO EN LEARNIFY => List subject with id 1
-# GET http://localhost:3000/subjects/1 
+# # LISTAR INFO DE UN CURSO EN ESPECIFICO EN LEARNIFY => List subject with id 1
+# GET http://localhost:3000/subjects
 
 # LISTAR PROFESORES DISPONIBLES EN LEARNIFY
 # GET http://localhost:3000/professors
@@ -20,7 +20,7 @@
 # http://localhost:3000/careers/1 => List career with id 1
 
 # LISTAR LAS MATERIAS POR UN PROFESOR ESPECIFICO EN LEARNIFY
-# GET http://localhost:3000/subjectsp/2 HTTP/1.1
+# GET http://localhost:3000/subjectsp/3 HTTP/1.1
 # Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NTIxNjczNjZ9.GT9qvQvbytVOzUIVXJYd0B-RmNi8U4CjlJOsH9W-HWc
 
 # LISTAR LOS ARTÍCULOS POR UN PROFESOR ESPECIFICO EN LEARNIFY
