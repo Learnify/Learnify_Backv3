@@ -12,7 +12,7 @@ class ProfessorsController < ApplicationController
      if(@professor.role_id == 1)
          render json: @professor.as_json(except: [:password_digest, :updated_at, :role_id, :career_id], include: { career: {only: [:name]}, role: {only: [:name]}})
      else
-         render json: {"Message":"Usuario no es profesor"}
+         render json: {"Message":"User is not a professor"}
      end
   end
 
@@ -21,7 +21,7 @@ class ProfessorsController < ApplicationController
     @professor = User.where("name like ? AND role_id=1) OR (last_name like ? AND role_id=1", params[:name], params[:last_name])
 
      if @professor.empty?
-        render json: {"Message":"No existe el profesor"}
+        render json: {"Message":"Professor does not exist"}
      else
         render json: @professor.as_json(only: [:id, :name, :last_name]) 
      end
@@ -37,7 +37,7 @@ class ProfessorsController < ApplicationController
           render json: @professor.errors, status: :unprocessable_entity
         end
     else
-        #No tiene permisos para crear profesores
+      render json: {"Message":"You do not have permissions to create a professor"}
     end
   end
     

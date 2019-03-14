@@ -32,7 +32,7 @@
 
 # {
 #     "email":"jucrodriguezpu@unal.edu.co",
-#     "password":"987654321"
+#     "password":"123123123"
 # }
 
 # ### CREAR CARRERAS
@@ -58,10 +58,15 @@
 #     "user_id": 3
 # }
 
+# ### ELIMINAR MATERIAS => /subjects/id donde id será el id de la materia a eliminar
+
+# DELETE http://localhost:3000/subjects/1 HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1NTI2MzA3MjR9.9cc2Y4Il0czImiLEVJ7qRnr-Gw2YJP2NQQxc8ynHyT8
+
 # ### ASIGNAR MATERIAS
 
 # POST http://localhost:3000/subjects HTTP/1.1
-# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjozLCJleHAiOjE1NTI0MTM3MjB9.8ZedH7y2H6hwyTYPqte8sq8tJh7NbPU_9MfLczFk720
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1NTI2MzA3MjR9.9cc2Y4Il0czImiLEVJ7qRnr-Gw2YJP2NQQxc8ynHyT8
 # content-type: application/json
 
 # { 
@@ -69,10 +74,83 @@
 #     "user_id": 3
 # }
 
-# ###CREAR ARTÍCULOS
+# ### DESASIGNAR MATERIAS
+
+# POST http://localhost:3000/unassignsubject HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1NTI2MzA3MjR9.9cc2Y4Il0czImiLEVJ7qRnr-Gw2YJP2NQQxc8ynHyT8
+# content-type: application/json
+
+# { 
+#     "name":"%Programación Ruby%",
+#     "user_id": 3
+# }
+
+# ### CREAR FECHAS => Necesarias para crear que un profesor pueda asignarse fechas disponibles en su agenda
+
+# POST http://localhost:3000/appointments HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1NTI2MzA3MjR9.9cc2Y4Il0czImiLEVJ7qRnr-Gw2YJP2NQQxc8ynHyT8
+# content-type: application/json
+
+# { 
+#     "appointment":"2019-03-23"
+# }
+
+# ### ELIMINAR FECHAS
+
+# DELETE http://localhost:3000/appointments/6 HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1NTI2MzA3MjR9.9cc2Y4Il0czImiLEVJ7qRnr-Gw2YJP2NQQxc8ynHyT8 
+
+# ### ASIGNAR FECHA => Necesarias para crear fechas de tutoriales
+
+# POST http://localhost:3000/assigndate HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1NTI2MzA3MjR9.9cc2Y4Il0czImiLEVJ7qRnr-Gw2YJP2NQQxc8ynHyT8
+# content-type: application/json
+
+# { 
+#     "appointment":"2019-03-23",
+#     "user_id": 2
+# }
+
+# ### DESASIGNAR FECHA => Si por error se asigno, o el profesor ya no tiene esa disponible en su agenda para tutorias
+
+# POST http://localhost:3000/unassigndate HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1NTI2MzA3MjR9.9cc2Y4Il0czImiLEVJ7qRnr-Gw2YJP2NQQxc8ynHyT8
+# content-type: application/json
+
+# { 
+#     "appointment":"2019-03-23",
+#     "user_id": 2
+# }
+
+# ### SOLICITAR TUTORIALES => Es pertinente consultar las fechas disponibles para un tutorial previo a su creación,
+#                         dado que la lista desplegable de fechas en Front-End deberían ser los únicos posibles
+#                         appointments para solicitar un appoint con un profesor.
+
+# POST http://localhost:3000/tutorials HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1NTI2MzA3MjR9.9cc2Y4Il0czImiLEVJ7qRnr-Gw2YJP2NQQxc8ynHyT8
+# content-type: application/json
+
+# { 
+#     "appointment":"2019-03-19",
+#     "user_id": 4,
+#     "professor_id": 3,
+#     "subject_id": 1
+# }
+
+# ### ACEPTAR TUTORIAL POR PARTE DE UN PROFESOR
+
+# PUT http://localhost:3000/tutorials/1 HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1NTI2MzA3MjR9.9cc2Y4Il0czImiLEVJ7qRnr-Gw2YJP2NQQxc8ynHyT8
+# content-type: application/json
+
+# { 
+#     "accepted": true
+# }
+
+# ### CREAR ARTÍCULOS
 
 # POST http://localhost:3000/articles HTTP/1.1
-# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NTIxNjczNjZ9.GT9qvQvbytVOzUIVXJYd0B-RmNi8U4CjlJOsH9W-HWc
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1NTI2MzA3MjR9.9cc2Y4Il0czImiLEVJ7qRnr-Gw2YJP2NQQxc8ynHyT8
 # content-type: application/json
 
 # { 
@@ -82,6 +160,11 @@
 #     "url":"http://agenciadenoticias.unal.edu.co/detalle/article/primera-generacion-de-ciencias-de-la-computacion-ingresa-a-la-un.html",
 #     "user_id": 2
 # }
+
+# ### ELIMINAR ARTÍCULOS
+
+# DELETE http://localhost:3000/articles/6 HTTP/1.1
+# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE1NTI2MzA3MjR9.9cc2Y4Il0czImiLEVJ7qRnr-Gw2YJP2NQQxc8ynHyT8 
 
 # ### BUSQUEDA DE PROFESORES POR NOMBRE O APELLIDO
 

@@ -2,7 +2,7 @@ class SubjectsController < ApplicationController
   before_action :set_subject, only: [:show, :update, :destroy]
   skip_before_action :authenticate_request, only: [:show, :index, :showbyname]
 
-    # GET /subjects
+  # GET /subjects
   def index
     @subjects = Subject.all
 
@@ -48,9 +48,25 @@ class SubjectsController < ApplicationController
     end
   end
 
+  def unassignsubject
+    @user = User.find(params[:user_id])
+    @subject = Subject.where("name like ?", params[:name]).first
+
+    if @subject.present?
+      if @subject.users.include?(@user) 
+        @subject.users.delete(@user)
+        render json: {"Message":"Professor removed from Subject correctly"}
+      else
+        render json: {"Message":"Professor does not exist in Subject"}
+      end
+    else
+      render json: {"Message":"Subject does not exist in current list"}
+    end
+  end
+
   # PATCH/PUT /subjects/1
   def update
-    if @subject.update(career_params)
+    if @subject.update(subject_params)
       render json: @subject
     else
       render json: @subject.errors, status: :unprocessable_entity
@@ -59,7 +75,9 @@ class SubjectsController < ApplicationController
 
   # DELETE /subjects/1
   def destroy
-    @subject.destroy
+    if @subject.destroy
+      render json: {"Message":"Subject deleted successfully from current list"}
+    end
   end
 
   private

@@ -3,9 +3,9 @@
 # Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTE3MTIxOTN9.jU36OcO5UG0x_cqbbRwolNgbvNPPjPDjcHenKwTya1Q
 
 # LISTAR TODOS LOS CURSOS DISPONIBLES EN LEARNIFY
-# GET http://localhost:3000/articles/6
+# GET http://localhost:3000/articles/5
 
-# # LISTAR INFO DE UN CURSO EN ESPECIFICO EN LEARNIFY => List subject with id 1
+# # LISTAR INFO DE UN CURSO E ESPECÍFICO EN LEARNIFY => List subject with id 1
 # GET http://localhost:3000/subjects
 
 # LISTAR PROFESORES DISPONIBLES EN LEARNIFY
@@ -19,10 +19,18 @@
 # http://localhost:3000/careers => List all careers
 # http://localhost:3000/careers/1 => List career with id 1
 
-# LISTAR LAS MATERIAS POR UN PROFESOR ESPECIFICO EN LEARNIFY
-# GET http://localhost:3000/subjectsp/3 HTTP/1.1
-# Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NTIxNjczNjZ9.GT9qvQvbytVOzUIVXJYd0B-RmNi8U4CjlJOsH9W-HWc
+# LISTAR LAS MATERIAS POR UN PROFESOR ESPECÍFICO EN LEARNIFY
+# GET http://localhost:3000/subjectsp/2 HTTP/1.1
 
-# LISTAR LOS ARTÍCULOS POR UN PROFESOR ESPECIFICO EN LEARNIFY
+# LISTAR LOS ARTÍCULOS POR UN PROFESOR ESPECÍFICO EN LEARNIFY
 # GET http://localhost:3000/articlesp/2 HTTP/1.1
+
+# LISTAR FECHAS DE TUTORIAS DE TODA LA PLATAFORMA DE LEARNIFY
+# GET http://localhost:3000/appointments HTTP/1.1
+
+# LISTAR LAS FECHAS DISPONIBLES PARA UN TUTORIAL CON UN PROFESOR ESPECÍFICO
+# GET http://localhost:3000/appointmentsp/2 HTTP/1.1
+
+# LISTAR TUTORIALES DISPONIBLES COMO USUARIO
+# GET http://localhost:3000/tutorials HTTP/1.1
 # Authorization: eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE1NTIxNjczNjZ9.GT9qvQvbytVOzUIVXJYd0B-RmNi8U4CjlJOsH9W-HWc

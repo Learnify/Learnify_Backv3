@@ -6,6 +6,7 @@ class User < ApplicationRecord
     belongs_to :career
     has_many :articles
     has_and_belongs_to_many :subjects
+    has_and_belongs_to_many :appointments
     has_many :chat_rooms, dependent: :destroy
     has_many :messages, dependent: :destroy
     

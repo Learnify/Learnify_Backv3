@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :subjects, :articles, :update, :destroy]
-  skip_before_action :authenticate_request, only: [:create, :subjects, :articles]
+  before_action :set_user, only: [:show, :subjects, :articles, :appointments, :update, :destroy]
+  skip_before_action :authenticate_request, only: [:create, :subjects, :articles, :appointments]
 
   # GET /users
   def index
@@ -24,6 +24,11 @@ class UsersController < ApplicationController
     render json: @user.as_json(only: [:id, :name, :last_name, :email], include: { articles: {except: [:updated_at, :user_id]}})
   end
 
+  # GET /appointmentsp
+  def appointments
+    render json: @user.as_json(only: [:id, :name, :last_name, :email], include: { appointments: {only: [:id, :appointment]} })
+  end
+
   # POST /users
   def create
     @user = User.new(user_params)
@@ -37,7 +42,7 @@ class UsersController < ApplicationController
   end
 
   # PATCH/PUT /users/1
-  def update
+  def updates
     if @user.update(user_params)
       render json: @user
     else

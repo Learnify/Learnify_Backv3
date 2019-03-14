@@ -37,7 +37,9 @@ class ArticlesController < ApplicationController
 
   # DELETE /articles/1
   def destroy
-    @article.destroy
+    if @article.destroy
+      render json: {"Message":"Article deleted successfully"}
+    end
   end
 
   private

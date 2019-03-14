@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_11_175951) do
+ActiveRecord::Schema.define(version: 2019_03_14_070338) do
+
+  create_table "appointments", force: :cascade do |t|
+    t.date "appointment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "appointments_users", id: false, force: :cascade do |t|
+    t.integer "appointment_id"
+    t.integer "user_id"
+    t.boolean "available", default: true, null: false
+    t.index ["appointment_id", "user_id"], name: "by_appointment_and_user", unique: true
+  end
 
   create_table "articles", force: :cascade do |t|
     t.string "title"
@@ -75,6 +88,7 @@ ActiveRecord::Schema.define(version: 2019_03_11_175951) do
     t.integer "user_id"
     t.integer "professor_id"
     t.integer "subject_id"
+    t.boolean "accepted", default: false, null: false
     t.index ["professor_id"], name: "index_tutorials_on_professor_id"
     t.index ["subject_id"], name: "index_tutorials_on_subject_id"
     t.index ["user_id"], name: "index_tutorials_on_user_id"
