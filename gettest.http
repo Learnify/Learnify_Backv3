@@ -20,7 +20,9 @@
 # http://localhost:3000/careers/1 => List career with id 1
 
 # LISTAR LAS MATERIAS POR UN PROFESOR ESPECÍFICO EN LEARNIFY
-# GET http://localhost:3000/subjectsp/2 HTTP/1.1
+# GET http://learnifyback-jucrodriguezpu.c9users.io:8080/subjectsp/2 HTTP/1.1
+
+# http://learnifyback-jucrodriguezpu.c9users.io:8080/
 
 # LISTAR LOS ARTÍCULOS POR UN PROFESOR ESPECÍFICO EN LEARNIFY
 # GET http://localhost:3000/articlesp/2 HTTP/1.1
